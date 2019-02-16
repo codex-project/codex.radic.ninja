@@ -1,0 +1,18 @@
+{
+    "codex\/auth": {
+        "installed": true,
+        "enabled": true
+    },
+    "codex\/git": {
+        "installed": true,
+        "enabled": true
+    },
+    "codex\/phpdoc": {
+        "installed": true,
+        "enabled": true
+    },
+    "codex\/semver": {
+        "installed": false,
+        "enabled": false
+    }
+}

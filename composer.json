@@ -1,0 +1,121 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "repositories": [
+        {"type": "path", "url": "/mnt/fat/php/projects/codex/workbench/laradic/*"},
+        {"type": "path", "url": "../codex/codex/*"}
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "beyondcode/laravel-self-diagnosis": "^1.0",
+        "codex/auth": "~1.0",
+        "codex/core": "~2.1",
+        "codex/git": "~1.0",
+        "codex/phpdoc": "~1.0",
+        "codex/semver": "~1.0",
+        "doctrine/dbal": "^2.9",
+        "eddiriarte/console-select": "^2.0",
+        "fideloper/proxy": "^4.0",
+        "jackiedo/dotenv-editor": "^1.0",
+        "laravel/framework": "5.7.*",
+        "laravel/tinker": "^1.0",
+        "league/flysystem-sftp": "~1.0",
+        "league/flysystem-webdav": "~1.0",
+        "league/flysystem-ziparchive": "~1.0",
+        "spatie/flysystem-dropbox": "~1.0",
+        "spatie/laravel-responsecache": "^4.4",
+        "superbalist/flysystem-google-storage": "~5.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.5",
+        "beyondcode/laravel-dump-server": "^1.0",
+        "filp/whoops": "^2.0",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^2.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "clear": [
+            "@php artisan optimize:clear --ansi",
+            "@php artisan lighthouse:clear-cache --ansi",
+            "@php artisan route:clear --ansi",
+            "@php artisan config:clear --ansi",
+            "@php artisan view:clear --ansi",
+            "@php artisan cache:clear --ansi",
+            "@php artisan responsecache:clear --ansi",
+            "@php artisan clear-compiled --ansi"
+        ],
+        "optimize": [
+            "@composer clear",
+            "@php artisan optimize --ansi",
+            "@php artisan route:cache --ansi",
+            "@php artisan config:cache --ansi",
+            "@php artisan view:cache --ansi",
+            "@php artisan route:cache --ansi"
+        ],
+        "checks": [
+            "@php artisan lighthouse:validate-schema --ansi",
+            "@php artisan self-diagnosis --ansi"
+        ],
+        "ide": [
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
+        ],
+        "env:production": [
+            "@composer install --no-dev -o",
+            "@php artisan dotenv:set-key APP_ENV production --force",
+            "@composer optimize",
+            "@composer checks"
+        ],
+        "env:development": [
+            "@composer install --dev -o",
+            "@php artisan dotenv:set-key APP_ENV development --force",
+            "@composer clear",
+            "@composer ide",
+            "@composer checks"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}

@@ -1,0 +1,86 @@
+processors:
+    disable:
+        - phpdoc
+phpdoc:
+    enabled: false
+
+layout:
+    left:
+        menu:
+          - label: Preface
+            icon: fa-eye
+            children:
+              - label: Introduction
+                document: index
+              - label: Download
+                document: preface/download
+              - label: Credits
+                document: preface/credits
+
+          - label: Getting started
+            icon: fa-eye
+            children:
+              - label: Installation
+                document: getting-started/installation
+              - label: Configuration
+                document: getting-started/configuration
+              - label: Documentation Structure
+                document: getting-started/documentation-structure
+              - label: Navigation
+                document: getting-started/navigation
+              - label: Working Locally
+                document: getting-started/working-locally
+
+
+          - label: Writing Reference
+            icon: fa-eye
+            children:
+              - label: Markdown Basics
+                document: writing-reference/markdown-basics
+              - label: Github Flavored Markdown
+                document: writing-reference/github-flavored-markdown
+              - label: Callouts
+                document: writing-reference/callouts
+
+          - label: Learning More
+            icon: fa-eye
+            children:
+              - label: Storage Drivers
+                document: learning-more/storage-drivers
+
+
+          - label: Contributing
+            icon: fa-eye
+            children:
+              - label: Guidelines
+                document: contributing/guidelins
+
+              - label: PSR 1 Coding style
+                document: contributing/psr-1-coding-style
+
+              - label: PSR 2 Coding style
+                document: contributing/psr-2-coding-style
+
+
+
+          #
+          #  - Preface
+          #  	- [Introduction](introduction.md)
+          #  	- [Download](preface/download.md)
+          #  	- [Credits](preface/credits.md)
+          #  - Getting Started
+          #  	- [Installation](getting-started/installation.md)
+          #  	- [Configuration](getting-started/configuration.md)
+          #  	- [Documentation Structure](getting-started/documentation-structure.md)
+          #  	- [Navigation](getting-started/navigation.md)
+          #  	- [Working Locally](getting-started/working-locally.md)
+          #  - Writing Reference
+          #  	- [Markdown Basics](writing-reference/markdown-basics.md)
+          #  	- [Github Flavored Markdown](writing-reference/github-flavored-markdown.md)
+          #  	- [Callouts](writing-reference/callouts.md)
+          #  - Learning More
+          #  	- [Storage Drivers](learning-more/storage-drivers.md)
+          #  - Contributing
+          #  	- [Guidelines](contributing/guidelines.md)
+          #  	- [PSR-1 Coding Style](contributing/psr-1-coding-style.md)
+          #  	- [PSR-2 Coding Style](contributing/psr-2-coding-style.md)

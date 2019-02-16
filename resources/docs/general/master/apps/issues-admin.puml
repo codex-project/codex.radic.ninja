@@ -1,0 +1,25 @@
+@startuml
+
+package "Project" {
+
+    [Issues] --> issue
+}
+
+package "Issue Types" {
+    [issue types]
+    [issue type schemes]
+}
+
+package "Workflows" {
+    [workflows]
+    [workflow schemes]
+}
+package "Screens" {
+    [screens]
+    [screen schemes]
+    [issue type screen schemes]
+}
+package "Fields" {
+}
+
+@enduml

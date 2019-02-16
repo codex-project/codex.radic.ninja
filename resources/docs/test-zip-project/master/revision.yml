@@ -1,0 +1,121 @@
+layout:
+    header:
+        menu:
+            -   label   : Api
+                sublabel: Documentation
+                renderer: big
+                icon    : code
+                type    : router-link
+                path    : /phpdoc/codex/master
+    footer:
+        menu:
+            -   label: Github
+                icon : fa-github
+                href : https://github.com/codex-project
+
+            -   type: divider
+
+            -   label: Packagist
+                icon : fa-download
+                href : https://packagist.org/packages/codex
+    left  :
+        menu:
+            -   label   : Overview
+                icon    : fa-eye
+                document: index
+
+            -   label   : Processors
+                icon    : fa-eye
+                children:
+                    -   label   : Links
+                        document: processors/links
+
+                    -   label   : Macros
+                        document: processors/macros
+
+                    -   label   : TOC
+                        document: processors/toc
+
+
+            -   label   : Getting Started
+                icon    : fa-rocket
+                children:
+
+                    -   label   : Installation
+                        document: getting-started/installation
+
+                    -   label   : Configuration
+                        document: getting-started/configuration
+
+
+            -   label   : Examples
+                icon    : fa-rocket
+                children:
+                    -   label   : Layout
+                        children:
+                            -   label   : Example 1
+                                document: examples/layout/example1
+
+                            -   label   : Example 2
+                                document: examples/layout/example2
+
+                            -   label   : Example 2
+                                document: examples/layout/example3
+
+
+            -   label   : Menu Test
+                icon    : fa-rocket
+                children:
+                    -   label   : Menu Level 1 Item 1
+                        icon    : fa-rocket
+                        children:
+                            -   label   : Menu Level 2 Item 1
+                                document: getting-started/installation
+                            -   label   : Menu Level 2 Item 2
+                                document: getting-started/configuration
+                            -   label   : Menu Level 2 Item 3
+                                document: getting-started/creating-a-project
+                            -   label   : Menu Level 2 Item 4
+                                icon    : fa-rocket
+                                children:
+                                    -   label   : Menu Level 3 Item 1
+                                        icon    : fa-rocket
+                                        document: getting-started/installation
+                                    -   label   : Menu Level 3 Item 2
+                                        icon    : fa-rocket
+                                        document: getting-started/configuration
+                                    -   label   : Menu Level 3 Item 3
+                                        icon    : fa-rocket
+                                        document: getting-started/creating-a-project
+                                    -   label   : Menu Level 3 Item 4
+                                        icon    : fa-rocket
+                                        children:
+                                            -   label   : Menu Level 4 Item 1
+                                                document: getting-started/installation
+                                            -   label   : Menu Level 4 Item 2
+                                                document: getting-started/configuration
+                                            -   label   : Menu Level 4 Item 3
+                                                document: getting-started/creating-a-project
+
+                    -   label   : Menu Level 1 Item 2
+                        icon    : fa-rocket
+                        children:
+                            -   label   : Menu Level 2 Item 1
+                                icon    : fa-rocket
+                                children:
+                                    -   label   : Installation
+                                        document: getting-started/installation
+                                    -   label   : Configuration
+                                        document: getting-started/configuration
+                                    -   label   : Creating a project
+                                        document: getting-started/creating-a-project
+
+                    -   label   : Installation
+                        document: getting-started/installation
+
+                    -   label   : Configuration
+                        document: getting-started/configuration
+
+                    -   label   : Creating a project
+                        document: getting-started/creating-a-project
+

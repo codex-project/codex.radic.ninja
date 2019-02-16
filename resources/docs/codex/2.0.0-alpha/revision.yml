@@ -1,0 +1,97 @@
+layout:
+    header:
+        title: 2.0.0-alpha
+
+    left:
+        menu:
+          - label: Codex
+            icon: fa-eye
+            document: index
+
+          - label: Getting started
+            icon: fa-rocket
+            children:
+              - label: Installation
+                document: getting-started/installation
+              - label: Configuration
+                document: getting-started/configuration
+              - label: Creating a project
+                document: getting-started/creating-a-project
+
+          - label: Configuration
+            icon: fa-cog
+            children:
+              - label: Global
+                document: configuration/global
+
+              - label: Project
+                document: configuration/project
+
+              - label: Document
+                document: configuration/document
+
+              - label: Processors
+                children:
+                  - label: Attributes
+                    document: configuration/processors/attributes
+                  - label: Parser
+                    document: configuration/processors/parser
+                  - label: Macros
+                    document: configuration/processors/macros
+                  - label: Header
+                    document: configuration/processors/header
+                  - label: ToC
+                    document: configuration/processors/toc
+                  - label: Links
+                    document: configuration/processors/links
+                  - label: Buttons
+                    document: configuration/processors/buttons
+                  - label: Prism
+                    document: configuration/processors/toc
+
+          - label: Develop
+            icon: fa-code
+            children:
+
+              - label: Getting Started
+                document: develop/getting-started
+
+              - label: Addons
+                children:
+                  - label: Plugins
+                    document: develop/plugins
+                  - label: Processors
+                    document: develop/processors
+                  - label: Hooks
+                    document: develop/hooks
+
+              - label: Examples
+                document: develop/api
+
+              - label: API Documentation
+                document: phpdoc
+
+              - label: IntelliJ IDEA &amp; PHPStorm
+                document: develop/intellij-idea-phpstorm
+
+          - label: Test pages
+            icon: fa-rocket
+            children:
+              - label: Overview
+                document: test-pages/index
+              - label: Empty
+                document: test-pages/empty
+              - label: Jira Todo
+                document: test-pages/jira-todo
+              - label: Jira Issues
+                document: test-pages/jira-issues
+
+          - label: Contributing
+            icon: fa-eye
+            children:
+              - label: Guidelines
+                document: contributing/guidelins
+              - label: PSR 1 Coding style
+                document: contributing/psr-1-coding-style
+              - label: PSR 2 Coding style
+                document: contributing/psr-2-coding-style

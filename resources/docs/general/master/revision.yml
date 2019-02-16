@@ -1,0 +1,158 @@
+
+# defines the sidebar menu
+#sidebar:
+layout:
+  left:
+    menu:
+      - label: Overview
+        icon: fa fa-eye
+        document: index
+
+      - label: Linux
+        icon: fa fa-linux
+        children:
+    #      - label: Overview
+    #        document: linux/index
+          - label: Alternatives
+            document: linux/alternatives
+          - label: Cron
+            document: linux/cron
+          - label: Mount NTFS
+            document: linux/mount-ntfs
+
+      - label: Server
+        icon: fa fa-database
+        children:
+          - label: Overview
+            document: server/index
+
+          - label: Docker
+            document: server/docker
+
+          - label: Jenkins
+            children:
+              - label: Overview
+                document: server/jenkins/index
+
+      - label: Development
+        icon: fa fa-code
+        children:
+          - label: Typescript
+            children:
+              - label: Mixins
+                document: development/typescript/mixins
+              - label: Debugging with ts-node
+                document: development/typescript/ts-node-debugging
+
+          - label: PHP
+            document: development/typescript
+
+          - label: etc
+            document: development/typescript
+
+
+    #
+    #        document:
+    #
+    #      - label: Todo
+    #        document: todo
+    #
+    #      - label: Issues
+    #        document: issues
+    #
+    ##        children:
+    ##          - label: ToC Tree
+    ##            document: preview-pages/toc-tree
+    ##          - label: Syntax highlighting
+    ##            document: preview-pages/syntax-highlight
+    ##          - label: Markdown
+    ##            document: preview-pages/markdown
+    ##          - label: PHPDoc
+    ##            document: preview-pages/phpdoc
+    #
+    #
+    #  - label: Getting started
+    #    icon: fa fa-rocket
+    #    children:
+    #      - label: Installation
+    #        document: getting-started/installation
+    #
+    #      - label: Configuration
+    #        document: getting-started/configuration
+    #
+    #      - label: Creating a project
+    #        document: getting-started/creating-a-project
+    #
+    #
+    #  - label: Configuration
+    #    icon: fa fa-cog
+    #    children:
+    #      - label: Global
+    #        document: configuration/global
+    #
+    #      - label: Project
+    #        document: configuration/project
+    #
+    #      - label: Document
+    #        document: configuration/document
+    #
+    #      - label: Processors
+    #        document: configuration/processors/attributes
+    #        children:
+    #          - label: Attributes
+    #            document: configuration/processors/attributes
+    #          - label: Parser
+    #            document: configuration/processors/parser
+    #          - label: Macros
+    #            document: configuration/processors/macros
+    #          - label: Header
+    #            document: configuration/processors/header
+    #          - label: ToC
+    #            document: configuration/processors/toc
+    #          - label: Links
+    #            document: configuration/processors/links
+    #          - label: Buttons
+    #            document: configuration/processors/buttons
+    #          - label: Prism
+    #            document: configuration/processors/toc
+    #
+    #
+    #  - label: Develop
+    #    icon: fa fa-code
+    #    children:
+    #
+    #      - label: Getting Started
+    #        document: develop/getting-started
+    #
+    #      - label: Addons
+    #        children:
+    #          - label: Plugins
+    #            document: develop/plugins
+    #          - label: Processors
+    #            document: develop/processors
+    #          - label: Hooks
+    #            document: develop/hooks
+    #
+    #      - label: Examples
+    #        document: develop/api
+    #
+    #      - label: API Documentation
+    #        document: phpdoc
+    #
+    #      - label: IntelliJ IDEA &amp; PHPStorm
+    #        document: develop/intellij-idea-phpstorm
+    #
+    #
+    #
+    #
+    #  - label: Contributing
+    #    icon: fa fa-eye
+    #    children:
+    #      - label: Guidelines
+    #        document: contributing/guidelins
+    #
+    #      - label: PSR 1 Coding style
+    #        document: contributing/psr-1-coding-style
+    #
+    #      - label: PSR 2 Coding style
+    #        document: contributing/psr-2-coding-style
