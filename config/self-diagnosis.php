@@ -59,6 +59,7 @@ return [
                 // 'project/revision'
             ],
         ],
+        \App\Codex\Checks\PublicAssetsArePublished::class
     ],
 
     /*
@@ -76,11 +77,11 @@ return [
             \BeyondCode\SelfDiagnosis\Checks\ConfigurationIsCached::class,
             \BeyondCode\SelfDiagnosis\Checks\DebugModeIsNotEnabled::class,
             \BeyondCode\SelfDiagnosis\Checks\RoutesAreCached::class,
-            \BeyondCode\SelfDiagnosis\Checks\PhpExtensionsAreDisabled::class => [
-                'extensions' => [
-                    'xdebug',
-                ],
-            ]
+//            \BeyondCode\SelfDiagnosis\Checks\PhpExtensionsAreDisabled::class => [
+//                'extensions' => [
+//                    'xdebug',
+//                ],
+//            ]
             //\BeyondCode\SelfDiagnosis\Checks\ServersArePingable::class => [
             //    'servers' => [
             //        'www.google.com',

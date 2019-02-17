@@ -29,8 +29,10 @@ layout:
                 children:
                     -   label   : Installation
                         document: getting-started/installation
+                    -   label   : Core Concepts
+                        document: getting-started/core-concepts
                     -   label   : Basic Configuration
-                        document: getting-started/configuration
+                        document: getting-started/basic-configuration
                     -   label   : Directory Structure
                         document: getting-started/directory-structure
                     -   label   : Creating a Project
@@ -38,17 +40,13 @@ layout:
                     -   label   : Writing documentation
                         document: getting-started/writing-documentation
 
-            -   label   : Configuration
+            -   label   : Writing Reference
                 icon    : pencil
                 children:
-                    -   label   : Global
-                        document: configuration/global
-                    -   label   : Project
-                        document: configuration/project
-                    -   label   : Revision
-                        document: configuration/revision
-                    -   label   : Document
-                        document: configuration/document
+                    -   label   : Markdown Basics
+                        document: writing-reference/markdown-basics
+                    -   label   : Markdown Extensions
+                        document: writing-reference/markdown-extensions
 
             -   label   : Processors
                 icon    : cogs
@@ -62,23 +60,18 @@ layout:
                     -   label   : TOC
                         document: processors/toc
 
-            -   label   : Architecture Concepts
-                icon    : pencil
-                children:
-                    -   label   : Overview
-                        document: architecture-concepts/overview
-                    -   label   : Processors
-                        document: architecture-concepts/projects
-                    -   label   : Hooks
-                        document: architecture-concepts/revisions
-                    -   label   : Addons
-                        document: architecture-concepts/documents
-
             -   label   : Addons
                 icon    : puzzle-piece
                 children:
-                    -   label   : Overview
-                        document: addons/overview
+                    -   label   : Algolia Search
+                        document: addons/algolia-search
+                    -   label: Auth
+                        document: addons/auth
+                    -   label: Git
+                        document: addons/git
+                    -   label: Phpdoc
+                        document: addons/phpdoc
+
 
             -   label   : Examples
                 icon    : fa-rocket

@@ -6,6 +6,29 @@ subtitle: Processors
 # TOC Processor
 The Table of Content processor is exactly what you see right here.
 
+```php
+$project  = codex()->getProject('codex');
+$revision = $project->getRevision('master');
+$document = $revision->getDocument('index');
+$content  = $document->getContent();
+
+echo $document['title'];
+echo $document->attr('title', 'Overview');
+
+$phpdoc     = $revision->phpdoc();
+$file       = $phpdoc->getFileByFullName($phpdoc->getDefaultClass());
+$class      = $file->getClass();
+/** @var \Codex\Phpdoc\Serializer\Phpdoc\File\Method $method */
+$method     = $class->getMethods()->get('get');
+$isAbstract = $method->isAbstract();
+
+$member = $project->getGitConfig()->getManager()->getClient()->organizations()->members()->member('org', 'user');
+if($project->auth()->hasAccess()){
+    echo 'hasAccess';
+}
+```
+
+[^1] asdfsd
 
 ## First 
 this is the first header

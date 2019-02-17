@@ -3,6 +3,7 @@
 namespace App\Codex;
 
 use App\Codex\Console\DotenvSetKeyCommand;
+use App\Codex\Console\SitemapCommand;
 use Google\Cloud\Storage\StorageClient;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Filesystem\FilesystemAdapter;
@@ -20,16 +21,17 @@ class CodexServiceProvider extends ServiceProvider
 {
     public function provides()
     {
-        return [ 'command.dotenv.setkey' ];
+        return [ 'command.dotenv.setkey', 'command.sitemap.generate' ];
     }
 
     public function register()
     {
         $this->app->register(DotenvEditorServiceProvider::class);
         $this->app->singleton('command.dotenv.setkey', DotenvSetKeyCommand::class);
+        $this->app->singleton('command.sitemap.generate', SitemapCommand::class);
         $this->registerFilesystemAdapters();
 
-        $this->commands([ 'command.dotenv.setkey' ]);
+        $this->commands([ 'command.dotenv.setkey', 'command.sitemap.generate' ]);
     }
 
     protected function registerFilesystemAdapters()
