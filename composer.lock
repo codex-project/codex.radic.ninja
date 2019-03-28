@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "becdfd113f63600654bab5566c801162",
+    "content-hash": "6e5dec1273cd43d5e908e9789fe31c5a",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -444,21 +444,31 @@
         },
         {
             "name": "codex/algolia-search",
-            "version": "dev-master",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../codex/codex/algolia-search",
-                "reference": "c085f17bf83afb6c61a11913c0c2eaf15ffa9c2c",
+                "reference": "0fc59d2630962462681ebc3ce000235325cc01a4",
                 "shasum": null
             },
             "require": {
-                "codex/core": "~2.1",
+                "codex/core": "~2.0",
                 "vinkla/algolia": "~3.0"
+            },
+            "suggest": {
+                "codex/auth": "Provides authentication using oauth providers (socialite) to restrict project access (~2.0)",
+                "codex/blog": "Provides blogging capability with categories containing posts (~2.0)",
+                "codex/comments": "Adds comments to your documents like Disqus or create your own adapter (~2.0)",
+                "codex/filesystems": "Adds a collection of common filesystem adapters. These can be used by your projects. (~2.0)",
+                "codex/git": "Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches. (~2.0)",
+                "codex/packagist": "Integrates Packagist information links and macros in your projects (~2.0)",
+                "codex/phpdoc": "Integrates PHPDoc documentation, links and macros in your projects (~2.0)",
+                "codex/sitemap": "Generates a sitemap.xml (~2.0)"
             },
             "type": "codex-addon",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-develop": "2.0.x-dev"
                 },
                 "laravel": {
                     "dont-discover": [
@@ -475,25 +485,59 @@
             "license": [
                 "MIT"
             ],
-            "description": "Codex Algolia Search Addon adds search."
+            "authors": [
+                {
+                    "name": "Robin Radic",
+                    "email": "rradic@hotmail.com",
+                    "homepage": "https://radic.ninja",
+                    "role": "developer"
+                }
+            ],
+            "description": "Codex Addon - Integrates algolia search into codex ",
+            "homepage": "https://codex.radic.ninja",
+            "keywords": [
+                "algolia",
+                "codex",
+                "documentation",
+                "laravel",
+                "markdown",
+                "search"
+            ],
+            "support": {
+                "docs": "https://codex.radic.ninja",
+                "email": "rradic@hotmail.com",
+                "issues": "https://github.com/codex-project/codex/issues",
+                "source": "https://github.com/codex-project/codex/algolia-search",
+                "wiki": "https://codex.radic.ninja"
+            }
         },
         {
             "name": "codex/auth",
-            "version": "dev-master",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../codex/codex/auth",
-                "reference": "5661f2b293472b7f00486ce1a437fc6126670c95",
+                "reference": "40d352cda77d8bd936923d90ba363dc498c96e7c",
                 "shasum": null
             },
             "require": {
-                "codex/core": "~2.1",
+                "codex/core": "~2.0",
                 "laravel/socialite": "~4.0"
+            },
+            "suggest": {
+                "codex/algolia-search": "Integrates algolia search into codex (~2.0)",
+                "codex/blog": "Provides blogging capability with categories containing posts (~2.0)",
+                "codex/comments": "Adds comments to your documents like Disqus or create your own adapter (~2.0)",
+                "codex/filesystems": "Adds a collection of common filesystem adapters. These can be used by your projects. (~2.0)",
+                "codex/git": "Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches. (~2.0)",
+                "codex/packagist": "Integrates Packagist information links and macros in your projects (~2.0)",
+                "codex/phpdoc": "Integrates PHPDoc documentation, links and macros in your projects (~2.0)",
+                "codex/sitemap": "Generates a sitemap.xml (~2.0)"
             },
             "type": "codex-addon",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-develop": "2.0.x-dev"
                 },
                 "laravel": {
                     "dont-discover": [
@@ -509,24 +553,63 @@
             "license": [
                 "MIT"
             ],
-            "description": "Codex Auth Addon"
+            "authors": [
+                {
+                    "name": "Robin Radic",
+                    "email": "rradic@hotmail.com",
+                    "homepage": "https://radic.ninja",
+                    "role": "developer"
+                }
+            ],
+            "description": "Codex Addon - Provides authentication using oauth providers (socialite) to restrict project access",
+            "homepage": "https://codex.radic.ninja",
+            "keywords": [
+                "auth",
+                "authentication",
+                "authorisation",
+                "codex",
+                "documentation",
+                "laravel",
+                "markdown",
+                "oauth",
+                "security",
+                "social",
+                "socialite"
+            ],
+            "support": {
+                "docs": "https://codex.radic.ninja",
+                "email": "rradic@hotmail.com",
+                "issues": "https://github.com/codex-project/codex/issues",
+                "source": "https://github.com/codex-project/codex/auth",
+                "wiki": "https://codex.radic.ninja"
+            }
         },
         {
             "name": "codex/blog",
-            "version": "dev-master",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../codex/codex/blog",
-                "reference": "180fdefebcafb23ed356c8ae6f67d3276c51d4f4",
+                "reference": "e9cbcbed14f6727369027200a6a74cbbbb2bea8f",
                 "shasum": null
             },
             "require": {
-                "codex/core": "~2.1"
+                "codex/core": "~2.0"
+            },
+            "suggest": {
+                "codex/algolia-search": "Integrates algolia search into codex (~2.0)",
+                "codex/auth": "Provides authentication using oauth providers (socialite) to restrict project access (~2.0)",
+                "codex/comments": "Adds comments to your documents like Disqus or create your own adapter (~2.0)",
+                "codex/filesystems": "Adds a collection of common filesystem adapters. These can be used by your projects. (~2.0)",
+                "codex/git": "Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches. (~2.0)",
+                "codex/packagist": "Integrates Packagist information links and macros in your projects (~2.0)",
+                "codex/phpdoc": "Integrates PHPDoc documentation, links and macros in your projects (~2.0)",
+                "codex/sitemap": "Generates a sitemap.xml (~2.0)"
             },
             "type": "codex-addon",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-develop": "2.0.x-dev"
                 },
                 "laravel": {
                     "dont-discover": [
@@ -542,24 +625,60 @@
             "license": [
                 "MIT"
             ],
-            "description": "A Codex Addon"
+            "authors": [
+                {
+                    "name": "Robin Radic",
+                    "email": "rradic@hotmail.com",
+                    "homepage": "https://radic.ninja",
+                    "role": "developer"
+                }
+            ],
+            "description": "Codex Addon - Provides blogging capability with categories containing posts",
+            "homepage": "https://codex.radic.ninja",
+            "keywords": [
+                "blog",
+                "blogging",
+                "codex",
+                "documentation",
+                "laravel",
+                "markdown",
+                "post",
+                "posts"
+            ],
+            "support": {
+                "docs": "https://codex.radic.ninja",
+                "email": "rradic@hotmail.com",
+                "issues": "https://github.com/codex-project/codex/issues",
+                "source": "https://github.com/codex-project/codex/blog",
+                "wiki": "https://codex.radic.ninja"
+            }
         },
         {
             "name": "codex/comments",
-            "version": "dev-master",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../codex/codex/comments",
-                "reference": "5c34336f912871c47371951ab6cfac6c8f95345c",
+                "reference": "66be39687ecc6d8d54b18d8d19f7d34fe4c0f615",
                 "shasum": null
             },
             "require": {
-                "codex/core": "~2.1"
+                "codex/core": "~2.0"
+            },
+            "suggest": {
+                "codex/algolia-search": "Integrates algolia search into codex (~2.0)",
+                "codex/auth": "Provides authentication using oauth providers (socialite) to restrict project access (~2.0)",
+                "codex/blog": "Provides blogging capability with categories containing posts (~2.0)",
+                "codex/filesystems": "Adds a collection of common filesystem adapters. These can be used by your projects. (~2.0)",
+                "codex/git": "Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches. (~2.0)",
+                "codex/packagist": "Integrates Packagist information links and macros in your projects (~2.0)",
+                "codex/phpdoc": "Integrates PHPDoc documentation, links and macros in your projects (~2.0)",
+                "codex/sitemap": "Generates a sitemap.xml (~2.0)"
             },
             "type": "codex-addon",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-develop": "2.0.x-dev"
                 },
                 "laravel": {
                     "dont-discover": [
@@ -575,7 +694,32 @@
             "license": [
                 "MIT"
             ],
-            "description": "A Codex Addon"
+            "authors": [
+                {
+                    "name": "Robin Radic",
+                    "email": "rradic@hotmail.com",
+                    "homepage": "https://radic.ninja",
+                    "role": "developer"
+                }
+            ],
+            "description": "Codex Addon - Adds comments to your documents like Disqus or create your own adapter",
+            "homepage": "https://codex.radic.ninja",
+            "keywords": [
+                "codex",
+                "comments",
+                "disqus",
+                "documentation",
+                "laravel",
+                "markdown",
+                "reactions"
+            ],
+            "support": {
+                "docs": "https://codex.radic.ninja",
+                "email": "rradic@hotmail.com",
+                "issues": "https://github.com/codex-project/codex/issues",
+                "source": "https://github.com/codex-project/codex/comments",
+                "wiki": "https://codex.radic.ninja"
+            }
         },
         {
             "name": "codex/composer-plugin",
@@ -681,15 +825,15 @@
         },
         {
             "name": "codex/filesystems",
-            "version": "dev-master",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../codex/codex/filesystems",
-                "reference": "bfddc43f6ab8c0b3a7f393e7b86c54c189a79483",
+                "reference": "bfe57d2140008f98a0bd8dddbf04e92647b91a4c",
                 "shasum": null
             },
             "require": {
-                "codex/core": "~2.1",
+                "codex/core": "~2.0",
                 "league/flysystem-rackspace": "~1.0",
                 "league/flysystem-sftp": "~1.0",
                 "league/flysystem-webdav": "~1.0",
@@ -697,10 +841,20 @@
                 "spatie/flysystem-dropbox": "~1.0",
                 "superbalist/flysystem-google-storage": "~5.0"
             },
+            "suggest": {
+                "codex/algolia-search": "Integrates algolia search into codex (~2.0)",
+                "codex/auth": "Provides authentication using oauth providers (socialite) to restrict project access (~2.0)",
+                "codex/blog": "Provides blogging capability with categories containing posts (~2.0)",
+                "codex/comments": "Adds comments to your documents like Disqus or create your own adapter (~2.0)",
+                "codex/git": "Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches. (~2.0)",
+                "codex/packagist": "Integrates Packagist information links and macros in your projects (~2.0)",
+                "codex/phpdoc": "Integrates PHPDoc documentation, links and macros in your projects (~2.0)",
+                "codex/sitemap": "Generates a sitemap.xml (~2.0)"
+            },
             "type": "codex-addon",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-develop": "2.0.x-dev"
                 },
                 "laravel": {
                     "dont-discover": [
@@ -716,31 +870,68 @@
             "license": [
                 "MIT"
             ],
-            "description": "A Codex Addon"
+            "authors": [
+                {
+                    "name": "Robin Radic",
+                    "email": "rradic@hotmail.com",
+                    "homepage": "https://radic.ninja",
+                    "role": "developer"
+                }
+            ],
+            "description": "Codex Addon - Adds a collection of common filesystem adapters. These can be used by your projects.",
+            "homepage": "https://codex.radic.ninja",
+            "keywords": [
+                "codex",
+                "disks",
+                "documentation",
+                "filesystem",
+                "flysystem",
+                "laravel",
+                "markdown",
+                "remote"
+            ],
+            "support": {
+                "docs": "https://codex.radic.ninja",
+                "email": "rradic@hotmail.com",
+                "issues": "https://github.com/codex-project/codex/issues",
+                "source": "https://github.com/codex-project/codex/filesystems",
+                "wiki": "https://codex.radic.ninja"
+            }
         },
         {
             "name": "codex/git",
-            "version": "dev-master",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../codex/codex/git",
-                "reference": "6f5deb4d51b134231aad3d22f807c3f08594f22f",
+                "reference": "7298de2f7443423bdb98e70696afb37469098a3c",
                 "shasum": null
             },
             "require": {
-                "codex/core": "~2.1",
+                "codex/core": "~2.0",
                 "graham-campbell/bitbucket": "~4.1",
                 "graham-campbell/github": "~7.3",
                 "graham-campbell/manager": "~4.0",
                 "league/oauth2-client": "~2.3",
                 "league/oauth2-github": "~2.0",
                 "php-http/guzzle6-adapter": "1.1.*",
-                "stevenmaguire/oauth2-bitbucket": "~3.0"
+                "stevenmaguire/oauth2-bitbucket": "~3.0",
+                "vierbergenlars/php-semver": "3.0.*"
+            },
+            "suggest": {
+                "codex/algolia-search": "Integrates algolia search into codex (~2.0)",
+                "codex/auth": "Provides authentication using oauth providers (socialite) to restrict project access (~2.0)",
+                "codex/blog": "Provides blogging capability with categories containing posts (~2.0)",
+                "codex/comments": "Adds comments to your documents like Disqus or create your own adapter (~2.0)",
+                "codex/filesystems": "Adds a collection of common filesystem adapters. These can be used by your projects. (~2.0)",
+                "codex/packagist": "Integrates Packagist information links and macros in your projects (~2.0)",
+                "codex/phpdoc": "Integrates PHPDoc documentation, links and macros in your projects (~2.0)",
+                "codex/sitemap": "Generates a sitemap.xml (~2.0)"
             },
             "type": "codex-addon",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-develop": "2.0.x-dev"
                 },
                 "laravel": {
                     "dont-discover": [
@@ -756,19 +947,120 @@
             "license": [
                 "MIT"
             ],
-            "description": "Codex Git Addon"
+            "authors": [
+                {
+                    "name": "Robin Radic",
+                    "email": "rradic@hotmail.com",
+                    "homepage": "https://radic.ninja",
+                    "role": "developer"
+                }
+            ],
+            "description": "Codex Addon - Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches.",
+            "homepage": "https://codex.radic.ninja",
+            "keywords": [
+                "automation",
+                "bitbucket",
+                "branches",
+                "codex",
+                "documentation",
+                "git",
+                "github",
+                "laravel",
+                "markdown",
+                "sync",
+                "synchronisation",
+                "tags",
+                "webhook"
+            ],
+            "support": {
+                "docs": "https://codex.radic.ninja",
+                "email": "rradic@hotmail.com",
+                "issues": "https://github.com/codex-project/codex/issues",
+                "source": "https://github.com/codex-project/codex/git",
+                "wiki": "https://codex.radic.ninja"
+            }
         },
         {
-            "name": "codex/phpdoc",
-            "version": "dev-master",
+            "name": "codex/packagist",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
-                "url": "../codex/codex/phpdoc",
-                "reference": "2959c52a29ab836f03770bf66d0ae9635022a0bf",
+                "url": "../codex/codex/packagist",
+                "reference": "c6bcee589cf3e53d357c039118721bd1e856a267",
                 "shasum": null
             },
             "require": {
-                "codex/core": "~2.1",
+                "codex/core": "~2.0",
+                "knplabs/packagist-api": "1.5.*"
+            },
+            "suggest": {
+                "codex/algolia-search": "Integrates algolia search into codex (~2.0)",
+                "codex/auth": "Provides authentication using oauth providers (socialite) to restrict project access (~2.0)",
+                "codex/blog": "Provides blogging capability with categories containing posts (~2.0)",
+                "codex/comments": "Adds comments to your documents like Disqus or create your own adapter (~2.0)",
+                "codex/filesystems": "Adds a collection of common filesystem adapters. These can be used by your projects. (~2.0)",
+                "codex/git": "Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches. (~2.0)",
+                "codex/phpdoc": "Integrates PHPDoc documentation, links and macros in your projects (~2.0)",
+                "codex/sitemap": "Generates a sitemap.xml (~2.0)"
+            },
+            "type": "codex-addon",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "2.0.x-dev"
+                },
+                "laravel": {
+                    "dont-discover": [
+                        "codex/packagist"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Codex\\Packagist\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robin Radic",
+                    "email": "rradic@hotmail.com",
+                    "homepage": "https://radic.ninja",
+                    "role": "developer"
+                }
+            ],
+            "description": "Codex Addon - Integrates Packagist information links and macros in your projects",
+            "homepage": "https://codex.radic.ninja",
+            "keywords": [
+                "api",
+                "codex",
+                "documentation",
+                "laravel",
+                "markdown",
+                "package",
+                "packages",
+                "packagist"
+            ],
+            "support": {
+                "docs": "https://codex.radic.ninja",
+                "email": "rradic@hotmail.com",
+                "issues": "https://github.com/codex-project/codex/issues",
+                "source": "https://github.com/codex-project/codex/packagist",
+                "wiki": "https://codex.radic.ninja"
+            }
+        },
+        {
+            "name": "codex/phpdoc",
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "../codex/codex/phpdoc",
+                "reference": "85d778e1808de6a618d47495c60618990c4d0dc9",
+                "shasum": null
+            },
+            "require": {
+                "codex/core": "~2.0",
                 "jms/serializer": "~1.9",
                 "phpdocumentor/reflection-docblock": "~3.0|~4.0"
             },
@@ -780,6 +1072,16 @@
                 "phpunit/phpunit": "~6.0",
                 "superbalist/flysystem-google-storage": "~5.0"
             },
+            "suggest": {
+                "codex/algolia-search": "Integrates algolia search into codex (~2.0)",
+                "codex/auth": "Provides authentication using oauth providers (socialite) to restrict project access (~2.0)",
+                "codex/blog": "Provides blogging capability with categories containing posts (~2.0)",
+                "codex/comments": "Adds comments to your documents like Disqus or create your own adapter (~2.0)",
+                "codex/filesystems": "Adds a collection of common filesystem adapters. These can be used by your projects. (~2.0)",
+                "codex/git": "Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches. (~2.0)",
+                "codex/packagist": "Integrates Packagist information links and macros in your projects (~2.0)",
+                "codex/sitemap": "Generates a sitemap.xml (~2.0)"
+            },
             "type": "codex-addon",
             "extra": {
                 "laravel": {
@@ -788,7 +1090,7 @@
                     ]
                 },
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-develop": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -807,43 +1109,62 @@
             "authors": [
                 {
                     "name": "Robin Radic",
-                    "email": "robin@radic.nl"
+                    "email": "rradic@hotmail.com",
+                    "homepage": "https://radic.ninja",
+                    "role": "developer"
                 }
             ],
-            "description": "The Phpdoc addon provides Codex the means to parse the phpdoc generated xml file and integrate documenation in a user-friendly way.",
-            "homepage": "http://codex-project.ninja",
+            "description": "Codex Addon - Integrates PHPDoc documentation, links and macros in your projects",
+            "homepage": "https://codex.radic.ninja",
             "keywords": [
+                "api",
+                "api documentation",
+                "api-doc",
+                "apidoc",
                 "codex",
-                "docs",
                 "documentation",
+                "information",
                 "laravel",
+                "links",
+                "macros",
                 "markdown",
                 "phpdoc"
             ],
             "support": {
-                "docs": "http://codex-project.ninja/documentation/codex-addon-phpdoc",
-                "email": "robin@radic.nl",
-                "issues": "https://github.com/codex-project/addon-phpdoc/issues",
-                "source": "https://github.com/codex-project/addon-phpdoc"
+                "docs": "https://codex.radic.ninja",
+                "email": "rradic@hotmail.com",
+                "issues": "https://github.com/codex-project/codex/issues",
+                "source": "https://github.com/codex-project/codex/phpdoc",
+                "wiki": "https://codex.radic.ninja"
             }
         },
         {
             "name": "codex/sitemap",
-            "version": "dev-master",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../codex/codex/sitemap",
-                "reference": "e2cbe5911fb28ff16b35458681e120ec65695d92",
+                "reference": "b2051c101907c0246939c97f17b5d2ab1f8bd25d",
                 "shasum": null
             },
             "require": {
-                "codex/core": "~2.1",
+                "codex/core": "~2.0",
                 "spatie/laravel-sitemap": "^5.2"
+            },
+            "suggest": {
+                "codex/algolia-search": "Integrates algolia search into codex (~2.0)",
+                "codex/auth": "Provides authentication using oauth providers (socialite) to restrict project access (~2.0)",
+                "codex/blog": "Provides blogging capability with categories containing posts (~2.0)",
+                "codex/comments": "Adds comments to your documents like Disqus or create your own adapter (~2.0)",
+                "codex/filesystems": "Adds a collection of common filesystem adapters. These can be used by your projects. (~2.0)",
+                "codex/git": "Enables Github/Bitbucket integration & synchronisation (auto-webhook or manual) based on tags/branches. (~2.0)",
+                "codex/packagist": "Integrates Packagist information links and macros in your projects (~2.0)",
+                "codex/phpdoc": "Integrates PHPDoc documentation, links and macros in your projects (~2.0)"
             },
             "type": "codex-addon",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-develop": "2.0.x-dev"
                 },
                 "laravel": {
                     "dont-discover": [
@@ -860,7 +1181,34 @@
             "license": [
                 "MIT"
             ],
-            "description": "A Codex Addon"
+            "authors": [
+                {
+                    "name": "Robin Radic",
+                    "email": "rradic@hotmail.com",
+                    "homepage": "https://radic.ninja",
+                    "role": "developer"
+                }
+            ],
+            "description": "Codex Addon. Generates a sitemap.xml.",
+            "homepage": "https://codex.radic.ninja",
+            "keywords": [
+                "codex",
+                "documentation",
+                "google",
+                "laravel",
+                "markdown",
+                "search-engine",
+                "seo",
+                "sitemap",
+                "xml"
+            ],
+            "support": {
+                "docs": "https://codex.radic.ninja",
+                "email": "rradic@hotmail.com",
+                "issues": "https://github.com/codex-project/codex/issues",
+                "source": "https://github.com/codex-project/codex/sitemap",
+                "wiki": "https://codex.radic.ninja"
+            }
         },
         {
             "name": "colinodell/json5",
@@ -1136,16 +1484,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "v1.6.0",
+            "version": "v1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "c7f2050c68a9ab0bdb0f98567ec08d80ea7d24d5"
+                "reference": "53120e0eb10355388d6ccbe462f1fea34ddadb24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/c7f2050c68a9ab0bdb0f98567ec08d80ea7d24d5",
-                "reference": "c7f2050c68a9ab0bdb0f98567ec08d80ea7d24d5",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/53120e0eb10355388d6ccbe462f1fea34ddadb24",
+                "reference": "53120e0eb10355388d6ccbe462f1fea34ddadb24",
                 "shasum": ""
             },
             "require": {
@@ -1200,7 +1548,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2017-12-06T07:11:42+00:00"
+            "time": "2019-03-25T19:12:02+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1502,27 +1850,29 @@
         },
         {
             "name": "doctrine/instantiator",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda"
+                "reference": "a2c590166b2133a4633738648b6b064edae0814a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
-                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/a2c590166b2133a4633738648b6b064edae0814a",
+                "reference": "a2c590166b2133a4633738648b6b064edae0814a",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1"
             },
             "require-dev": {
-                "athletic/athletic": "~0.1.8",
+                "doctrine/coding-standard": "^6.0",
                 "ext-pdo": "*",
                 "ext-phar": "*",
-                "phpunit/phpunit": "^6.2.3",
-                "squizlabs/php_codesniffer": "^3.0.2"
+                "phpbench/phpbench": "^0.13",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpstan/phpstan-shim": "^0.11",
+                "phpunit/phpunit": "^7.0"
             },
             "type": "library",
             "extra": {
@@ -1547,12 +1897,12 @@
                 }
             ],
             "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
-            "homepage": "https://github.com/doctrine/instantiator",
+            "homepage": "https://www.doctrine-project.org/projects/instantiator.html",
             "keywords": [
                 "constructor",
                 "instantiate"
             ],
-            "time": "2017-07-22T11:58:36+00:00"
+            "time": "2019-03-17T17:37:11+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -3346,6 +3696,58 @@
                 "github"
             ],
             "time": "2019-01-28T19:31:35+00:00"
+        },
+        {
+            "name": "knplabs/packagist-api",
+            "version": "v1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/packagist-api.git",
+                "reference": "74dbe93eab7cb80feb8fb9f2294f962d8d37fc71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/packagist-api/zipball/74dbe93eab7cb80feb8fb9f2294f962d8d37fc71",
+                "reference": "74dbe93eab7cb80feb8fb9f2294f962d8d37fc71",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/inflector": "~1.0",
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Packagist\\Api\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                }
+            ],
+            "description": "Packagist API client.",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "api",
+                "composer",
+                "packagist"
+            ],
+            "time": "2018-01-19T08:15:53+00:00"
         },
         {
             "name": "laradic/dependency-sorter",
@@ -8965,16 +9367,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
+                "reference": "82ebae02209c21113908c229e9883c419720738a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
-                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
+                "reference": "82ebae02209c21113908c229e9883c419720738a",
                 "shasum": ""
             },
             "require": {
@@ -8986,7 +9388,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -9008,7 +9410,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -9019,20 +9421,20 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/polyfill-iconv",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-iconv.git",
-                "reference": "97001cfc283484c9691769f51cdf25259037eba2"
+                "reference": "f037ea22acfaee983e271dd9c3b8bb4150bd8ad7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/97001cfc283484c9691769f51cdf25259037eba2",
-                "reference": "97001cfc283484c9691769f51cdf25259037eba2",
+                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/f037ea22acfaee983e271dd9c3b8bb4150bd8ad7",
+                "reference": "f037ea22acfaee983e271dd9c3b8bb4150bd8ad7",
                 "shasum": ""
             },
             "require": {
@@ -9044,7 +9446,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -9078,20 +9480,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-09-21T06:26:08+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "89de1d44f2c059b266f22c9cc9124ddc4cd0987a"
+                "reference": "c766e95bec706cdd89903b1eda8afab7d7a6b7af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/89de1d44f2c059b266f22c9cc9124ddc4cd0987a",
-                "reference": "89de1d44f2c059b266f22c9cc9124ddc4cd0987a",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/c766e95bec706cdd89903b1eda8afab7d7a6b7af",
+                "reference": "c766e95bec706cdd89903b1eda8afab7d7a6b7af",
                 "shasum": ""
             },
             "require": {
@@ -9140,20 +9542,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-09-30T16:36:12+00:00"
+            "time": "2019-03-04T13:44:35+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
                 "shasum": ""
             },
             "require": {
@@ -9165,7 +9567,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -9199,20 +9601,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-09-21T13:07:52+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631"
+                "reference": "ab50dcf166d5f577978419edd37aa2bb8eabce0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
-                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/ab50dcf166d5f577978419edd37aa2bb8eabce0c",
+                "reference": "ab50dcf166d5f577978419edd37aa2bb8eabce0c",
                 "shasum": ""
             },
             "require": {
@@ -9221,7 +9623,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -9254,7 +9656,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-09-21T13:07:52+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/process",
@@ -9592,7 +9994,7 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.8.5",
+            "version": "v5.8.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
@@ -9686,6 +10088,58 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2017-11-27T11:13:29+00:00"
+        },
+        {
+            "name": "vierbergenlars/php-semver",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vierbergenlars/php-semver.git",
+                "reference": "be22b86be4c1133acc42fd1685276792024af5f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vierbergenlars/php-semver/zipball/be22b86be4c1133acc42fd1685276792024af5f9",
+                "reference": "be22b86be4c1133acc42fd1685276792024af5f9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "bin": [
+                "bin/semver",
+                "bin/update-versions"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "vierbergenlars\\SemVer\\": "src/",
+                    "vierbergenlars\\LibJs\\": "src/"
+                },
+                "classmap": [
+                    "src/vierbergenlars/SemVer/internal.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Vierbergen",
+                    "email": "vierbergenlars@gmail.com"
+                }
+            ],
+            "description": "The Semantic Versioner for PHP",
+            "keywords": [
+                "semantic",
+                "semver",
+                "versioning"
+            ],
+            "time": "2017-07-11T09:53:59+00:00"
         },
         {
             "name": "vinkla/algolia",
@@ -9905,12 +10359,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webuni/commonmark-attributes-extension.git",
-                "reference": "1763c3da3b5aa2651d8092f8c4546ad009da4879"
+                "reference": "f38e95532c19c6f267f2c5d7798faaba68c1569e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webuni/commonmark-attributes-extension/zipball/1763c3da3b5aa2651d8092f8c4546ad009da4879",
-                "reference": "1763c3da3b5aa2651d8092f8c4546ad009da4879",
+                "url": "https://api.github.com/repos/webuni/commonmark-attributes-extension/zipball/f38e95532c19c6f267f2c5d7798faaba68c1569e",
+                "reference": "f38e95532c19c6f267f2c5d7798faaba68c1569e",
                 "shasum": ""
             },
             "require": {
@@ -9924,7 +10378,7 @@
                 "symfony/var-dumper": "^2.8|^3.0",
                 "webuni/commonmark-table-extension": "~0.4"
             },
-            "type": "library",
+            "type": "commonmark-extension",
             "extra": {
                 "branch-alias": {
                     "dev-master": "0.6-dev"
@@ -9953,7 +10407,7 @@
                 "commonmark",
                 "markdown"
             ],
-            "time": "2019-01-24T09:09:57+00:00"
+            "time": "2019-03-28T08:44:04+00:00"
         },
         {
             "name": "webuni/commonmark-table-extension",
@@ -10081,16 +10535,16 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-ide-helper",
-            "version": "v2.6.1",
+            "version": "v2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "725711022be71c6fa2e7bc8f9648bf125986f027"
+                "reference": "39c148ad4273f5b8c49d0a363ddbc0462f1f2eec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/725711022be71c6fa2e7bc8f9648bf125986f027",
-                "reference": "725711022be71c6fa2e7bc8f9648bf125986f027",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/39c148ad4273f5b8c49d0a363ddbc0462f1f2eec",
+                "reference": "39c148ad4273f5b8c49d0a363ddbc0462f1f2eec",
                 "shasum": ""
             },
             "require": {
@@ -10151,7 +10605,7 @@
                 "phpstorm",
                 "sublime"
             ],
-            "time": "2019-03-05T09:24:51+00:00"
+            "time": "2019-03-26T10:38:22+00:00"
         },
         {
             "name": "barryvdh/reflection-docblock",
@@ -10401,24 +10855,23 @@
         },
         {
             "name": "composer/spdx-licenses",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/spdx-licenses.git",
-                "reference": "7a9556b22bd9d4df7cad89876b00af58ef20d3a2"
+                "reference": "a1aa51cf3ab838b83b0867b14e56fc20fbd55b3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/7a9556b22bd9d4df7cad89876b00af58ef20d3a2",
-                "reference": "7a9556b22bd9d4df7cad89876b00af58ef20d3a2",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/a1aa51cf3ab838b83b0867b14e56fc20fbd55b3d",
+                "reference": "a1aa51cf3ab838b83b0867b14e56fc20fbd55b3d",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.2 || ^7.0"
+                "php": "^5.3.2 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
-                "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 7"
             },
             "type": "library",
             "extra": {
@@ -10458,7 +10911,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2018-11-01T09:45:54+00:00"
+            "time": "2019-03-26T10:23:26+00:00"
         },
         {
             "name": "composer/xdebug-handler",
@@ -11325,16 +11778,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.5.7",
+            "version": "7.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "eb343b86753d26de07ecba7868fa983104361948"
+                "reference": "c29c0525cf4572c11efe1db49a8b8aee9dfac58a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/eb343b86753d26de07ecba7868fa983104361948",
-                "reference": "eb343b86753d26de07ecba7868fa983104361948",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c29c0525cf4572c11efe1db49a8b8aee9dfac58a",
+                "reference": "c29c0525cf4572c11efe1db49a8b8aee9dfac58a",
                 "shasum": ""
             },
             "require": {
@@ -11405,7 +11858,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-03-16T07:31:17+00:00"
+            "time": "2019-03-26T13:23:54+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
