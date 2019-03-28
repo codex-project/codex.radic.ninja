@@ -1,5 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="self-diagnosis -vvv" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/artisan" scriptParameters="self-diagnosis -vvv">
-    <method v="2" />
-  </configuration>
-</component>
