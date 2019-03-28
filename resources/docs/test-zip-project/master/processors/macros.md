@@ -1,7 +1,0 @@
----
-title: Macros
----
-
-# Macros
-
-tba
