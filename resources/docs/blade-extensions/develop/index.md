@@ -32,7 +32,7 @@ subtitle: Blade Extensions
    
 
 ## Quick example of all directives
-```blade
+```php
 @foreach($stuff as $key => $val)
     $loop->index;       // int, zero based
     $loop->index1;      // int, starts at 1

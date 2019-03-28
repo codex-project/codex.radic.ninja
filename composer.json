@@ -14,24 +14,22 @@
     "require": {
         "php": "^7.1.3",
         "beyondcode/laravel-self-diagnosis": "^1.0",
+        "codex/algolia-search": "~1.0",
         "codex/auth": "~1.0",
+        "codex/blog": "~1.0",
+        "codex/sitemap": "~1.0",
+        "codex/filesystems": "~1.0",
         "codex/core": "~2.1",
+        "codex/comments": "~1.0",
         "codex/git": "~1.0",
         "codex/phpdoc": "~1.0",
-        "codex/semver": "~1.0",
         "doctrine/dbal": "^2.9",
         "eddiriarte/console-select": "^2.0",
         "fideloper/proxy": "^4.0",
         "jackiedo/dotenv-editor": "^1.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "league/flysystem-sftp": "~1.0",
-        "league/flysystem-webdav": "~1.0",
-        "league/flysystem-ziparchive": "~1.0",
-        "spatie/flysystem-dropbox": "~1.0",
-        "spatie/laravel-responsecache": "^4.4",
-        "spatie/laravel-sitemap": "^5.2",
-        "superbalist/flysystem-google-storage": "~5.0"
+        "spatie/laravel-responsecache": "^4.4"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.5",
@@ -95,15 +93,19 @@
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta"
         ],
+        "assets": [
+            "rm public/vendor -r > /dev/null",
+            "@php artisan vendor:publish --tag=public --force --ansi"
+        ],
         "env:production": [
             "@composer install --no-dev -o",
-            "@php artisan dotenv:set-key APP_ENV production --force",
+            "@php artisan dotenv:set-key APP_ENV production --force --ansi",
             "@composer optimize",
             "@composer checks"
         ],
         "env:development": [
             "@composer install --dev -o",
-            "@php artisan dotenv:set-key APP_ENV development --force",
+            "@php artisan dotenv:set-key APP_ENV development --force --ansi",
             "@composer clear",
             "@composer ide",
             "@composer checks"
@@ -117,6 +119,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "post-update-cmd": [
+            "bash scripts.sh restart"
         ]
     }
 }

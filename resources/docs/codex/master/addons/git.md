@@ -127,3 +127,8 @@ To use automatic synchronisation:
 - Automatic synchronisation depends on a working laravel queue driver. Make sure you have it configured and running. 
 - You need to add a webhook to your github/bitbucket repository. The webhook url should be equal to the `codex.git.webhook.{bitbucket,github}` route url. Use `php artisan route:list` to get it.
 
+
+<!--*codex:general:hide*-->
+## Copyright/License
+Copyright 2019 [Robin Radic](https://github.com/RobinRadic) - [MIT Licensed](LICENSE.md)
+<!--*codex:/general:hide*-->

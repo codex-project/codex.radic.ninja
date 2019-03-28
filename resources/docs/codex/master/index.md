@@ -26,8 +26,6 @@ processors:
 
 <!--*codex:/general:hide*-->
 
-
-## Introduction
 **Codex** is a file-based documentation platform built on top of Laravel. It's completely customizable and dead simple to use to create beautiful documentation.
 
 Codex is able to do things like transforming markdown or automaticaly fetching documentation from a Bitbucket/Github repositories.
@@ -38,27 +36,28 @@ Most of it's features are provided by addons. Codex is extenable, themeable, hac
 - _Codex_ can provide documentation for multiple _Projects_.
 - Each _Project_ has one or more _Revisions (versions)_
 - Each _Revision_ contains _Documents_.
-- Echo _Document_ is passed trough _Processors_, modifying it's content before displaying.
-
-## Links
-- [getting-started/installation.md](getting-started/installation.md)
-- [getting-started/configuration.md](getting-started/configuration.md)
-- [getting-started/installation](getting-started/installation)
-- [getting-started/configuration](getting-started/configuration)
+- Eech _Document_ is passed trough _Processors_, modifying it's content before displaying.
 
 ## Features
 - Laravel 5
-- Markdown, Creole or custom document parsers
+- Ships with Markdown, Creole or custom document parsers
 - Host a unlimited number of _projects/manuals_ with accompanying _versions_
-- Extenable, themeable, hackable 
+- Extendable, themeable, hackable 
 - Simple to setup and use
 - Syntax Highlighting
 - Easy navigation defined in YAML
 - SEO Friendly URLs
-- Default theme build on Laravels theme
 - Multiple storage methods (local, dropbox, amazon, etc)
 - Can be installed as stand-alone or sub-component in your own (Laravel) project.
-- (Addon Feature) Github/Bitbucket (auto webhook) synchronisation based on tags/branches. 
-- (Addon Feature) Smooth working, custom PHPDoc integration
-- (Addon Feature) Access restriction on projects using Github/Bitbucket login
 - Much, much more!
+
+## Official Addons
+
+- [Algolia search](addons/algolia-search) - Integrates algolia search into codex 
+- [Auth](addons/auth) - Provides authentication using oauth providers to restrict project access
+- [Blog](addons/blog) - Provides blogging capability with categories containing posts
+- [Comments](addons/comments) - Adds comments to your documents like Disqus or create your own adapter
+- [Filesystems](addons/filesystems) - Adds a collection of common filesystem adapters. These can be used by your projects.
+- [Git](addons/git) - Github/Bitbucket (auto-webhook or manual) synchronisation based on tags/branches.
+- [Phpdoc](addons/phpdoc) - Integrates phpdoc documentation, links and macros in your projects
+- [Sitemap](addons/sitemap) - Generates a sitemap.xml

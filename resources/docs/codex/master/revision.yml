@@ -47,6 +47,14 @@ layout:
                         document: writing-reference/markdown-basics
                     -   label   : Markdown Extensions
                         document: writing-reference/markdown-extensions
+                    -   label   : UML
+                        document: writing-reference/uml
+                    -   label   : Charts
+                        document: writing-reference/charts
+                    -   label   : Diagrams
+                        document: writing-reference/diagrams
+                    -   label   : Mathematica
+                        document: writing-reference/mathematica
 
             -   label   : Processors
                 icon    : cogs
@@ -65,12 +73,20 @@ layout:
                 children:
                     -   label   : Algolia Search
                         document: addons/algolia-search
-                    -   label: Auth
+                    -   label   : Auth
                         document: addons/auth
-                    -   label: Git
+                    -   label   : Blog
+                        document: addons/blog
+                    -   label   : Comments
+                        document: addons/comments
+                    -   label   : Filesystems
+                        document: addons/filesystems
+                    -   label   : Git
                         document: addons/git
-                    -   label: Phpdoc
+                    -   label   : Phpdoc
                         document: addons/phpdoc
+                    -   label   : Sitemap
+                        document: addons/sitemap
 
 
             -   label   : Examples
@@ -80,10 +96,8 @@ layout:
                         children:
                             -   label   : Example 1
                                 document: examples/layout/example1
-
                             -   label   : Example 2
                                 document: examples/layout/example2
-
                             -   label   : Example 2
                                 document: examples/layout/example3
 
@@ -143,3 +157,6 @@ layout:
                     -   label   : Creating a project
                         document: getting-started/creating-a-project
 
+            -   label   : License
+                icon    : legal
+                document: LICENSE

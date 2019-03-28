@@ -21,45 +21,43 @@ class CodexServiceProvider extends ServiceProvider
 {
     public function provides()
     {
-        return [ 'command.dotenv.setkey', 'command.sitemap.generate' ];
+        return [ 'command.dotenv.setkey'  ];
     }
 
     public function register()
     {
         $this->app->register(DotenvEditorServiceProvider::class);
         $this->app->singleton('command.dotenv.setkey', DotenvSetKeyCommand::class);
-        $this->app->singleton('command.sitemap.generate', SitemapCommand::class);
-        $this->registerFilesystemAdapters();
 
-        $this->commands([ 'command.dotenv.setkey', 'command.sitemap.generate' ]);
+        $this->commands([ 'command.dotenv.setkey'  ]);
     }
 
     protected function registerFilesystemAdapters()
     {
-        $fsm = $this->app->make('filesystem');
-        $fsm->extend('webdav', function (Application $app, array $config = []) {
-            $client    = new WebDAVClient($config);
-            $adapter   = new WebDAVAdapter($client, $config[ 'prefix' ]);
-            $flysystem = new Filesystem($adapter);
-            return new FilesystemAdapter($flysystem);
-        });
-        $fsm->extend('dropbox', function (Application $app, array $config = []) {
-            $client    = new DropboxClient($config[ 'token' ]);
-            $adapter   = new DropboxAdapter($client, $config[ 'prefix' ] || '');
-            $flysystem = new Filesystem($adapter);
-            return new FilesystemAdapter($flysystem);
-        });
-        $fsm->extend('zip', function (Application $app, array $config = []) {
-            $adapter   = new ZipArchiveAdapter($config[ 'path' ]);
-            $flysystem = new Filesystem($adapter);
-            return new FilesystemAdapter($flysystem);
-        });
-        $fsm->extend('google-cloud', function (Application $app, array $config = []) {
-            $storageClient = new StorageClient($config);
-            $adapter       = new GoogleStorageAdapter($storageClient, $storageClient->bucket($config[ 'bucket' ]));
-            $flysystem     = new Filesystem($adapter);
-            return new FilesystemAdapter($flysystem);
-        });
+//        $fsm = $this->app->make('filesystem');
+//        $fsm->extend('webdav', function (Application $app, array $config = []) {
+//            $client    = new WebDAVClient($config);
+//            $adapter   = new WebDAVAdapter($client, $config[ 'prefix' ]);
+//            $flysystem = new Filesystem($adapter);
+//            return new FilesystemAdapter($flysystem);
+//        });
+//        $fsm->extend('dropbox', function (Application $app, array $config = []) {
+//            $client    = new DropboxClient($config[ 'token' ]);
+//            $adapter   = new DropboxAdapter($client, $config[ 'prefix' ] || '');
+//            $flysystem = new Filesystem($adapter);
+//            return new FilesystemAdapter($flysystem);
+//        });
+//        $fsm->extend('zip', function (Application $app, array $config = []) {
+//            $adapter   = new ZipArchiveAdapter($config[ 'path' ]);
+//            $flysystem = new Filesystem($adapter);
+//            return new FilesystemAdapter($flysystem);
+//        });
+//        $fsm->extend('google-cloud', function (Application $app, array $config = []) {
+//            $storageClient = new StorageClient($config);
+//            $adapter       = new GoogleStorageAdapter($storageClient, $storageClient->bucket($config[ 'bucket' ]));
+//            $flysystem     = new Filesystem($adapter);
+//            return new FilesystemAdapter($flysystem);
+//        });
     }
 
 }

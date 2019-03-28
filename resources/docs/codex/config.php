@@ -34,8 +34,22 @@ return [
 //            ]
 //        ]
 //    ],
-    'processors' => [
-        'enabled'    => [ 'attributes', 'parser', 'toc', 'header', 'macros', 'buttons', 'links', 'phpdoc', 'cache' ],
+    'processors'   => [
+        'enabled'    => [
+            'attributes' => true,
+            'parser'     => true,
+            'toc'        => true,
+            'header'     => true,
+            'macros'     => true,
+            'links'      => true,
+            'phpdoc'     => true,
+            'cache'      => true,
+            'buttons'    => true,
+            'comments'   => false,
+        ],
+        'comments'   => [
+            'connection' => 'disqus',
+        ],
         'attributes' => [
             'tags' => [
                 [ 'open' => '<!--*', 'close' => '--*>' ], // html, markdown
@@ -46,6 +60,16 @@ return [
         ],
         'toc'        => [
             'header_link_show' => true,
+        ],
+        'buttons'    => [
+            'buttons' => [
+                [
+                    'label'  => 'Test',
+                    'icon'   => 'github',
+                    'target' => '_blank',
+                    'href'   => 'https://github.com',
+                ],
+            ],
         ],
     ],
 

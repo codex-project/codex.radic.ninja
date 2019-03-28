@@ -8,7 +8,15 @@ return [
     'description' => 'General documentation for personal reference covering a wide array of subjects',
 
     'processors' => [
-        'enabled'    => [ 'attributes', 'parser', 'toc', 'header', 'macros', 'buttons', 'links' , 'prismjs']
+        'enabled'    => [
+            'attributes' => true,
+            'parser'     => true,
+            'toc'        => true,
+            'header'     => true,
+            'macros'     => true,
+            'links'      => true,
+            'phpdoc'     => true,
+            ]
     ],
 
 ];

@@ -16,7 +16,16 @@ return [
     'description' => 'This is a testing project',
 
     'processors' => [
-        'enabled'    => [ 'attributes', 'parser', 'toc', 'header', 'macros', 'buttons', 'links', 'prismjs' ],
+        'enabled'    => [
+
+            'attributes' => true,
+            'parser'     => true,
+            'toc'        => true,
+            'header'     => true,
+            'macros'     => true,
+            'links'      => true,
+            'phpdoc'     => true,
+            ],
         'attributes' => [
             'tags' => [
                 [ 'open' => '<!--*', 'close' => '--*>' ], // html, markdown

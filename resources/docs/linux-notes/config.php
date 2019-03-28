@@ -17,7 +17,15 @@ return [
     ],
 
     'processors' => [
-        'enabled'    => [ 'attributes', 'parser', 'toc', 'header', 'macros', 'buttons', 'links', 'phpdoc' ],
+        'enabled'    => [
+            'attributes' => true,
+            'parser'     => true,
+            'toc'        => true,
+            'header'     => true,
+            'macros'     => true,
+            'links'      => true,
+            'phpdoc'     => true,
+            ],
         'attributes' => [
             'tags' => [
                 [ 'open' => '<!--*', 'close' => '--*>' ], // html, markdown

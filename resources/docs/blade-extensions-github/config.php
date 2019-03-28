@@ -24,7 +24,14 @@ return [
     ],
 
     'processors' => [
-        'enabled' => [ 'attributes', 'parser', 'toc', 'header', 'macros',  'buttons', 'links' ],
+        'enabled' => [
+            'attributes' => true,
+            'parser'     => true,
+            'toc'        => true,
+            'header'     => true,
+            'macros'     => true,
+            'links'      => true,
+        ],
         'toc'     => [
             'header_link_show' => true,
         ],
