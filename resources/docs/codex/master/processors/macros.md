@@ -8,10 +8,6 @@ processors:
 # Macros
 
 
-<c-tabs>
-    <c-tab tab="Test">Test Content</c-tab>
-</c-tabs>
-
 <!--*codex:tabs*-->
 <!--*codex:tab('General')*-->
 
@@ -41,16 +37,23 @@ processors:
 
 
 <!--*codex:tab('Gists')*-->
-##### Gist + file + scrollbar
+<!--*codex:tabs({ tabPosition: 'left' })*-->
+<!--*codex:tab('File')*-->
 ```markdown
-<!--*codex:scrollbar(200)*-->
 <!--*codex:gist('10c3090294a416df4b7b459bfe914cc0', 'ControlPanelServiceProvider.php')*-->
-<!--*codex:/scrollbar*-->
 ```
-<!--*codex:scrollbar(200)*-->
 <!--*codex:gist('10c3090294a416df4b7b459bfe914cc0', 'ControlPanelServiceProvider.php')*-->
-<!--*codex:/scrollbar*-->
 <!--*codex:/tab*-->
+
+<!--*codex:tab('Full')*-->
+```markdown
+<!--*codex:gist('10c3090294a416df4b7b459bfe914cc0')*-->
+```
+<!--*codex:gist('10c3090294a416df4b7b459bfe914cc0')*-->
+<!--*codex:/tab*-->
+<!--*codex:/tabs*-->
+<!--*codex:/tab*-->
+
 
 
 <!--*codex:tab('Phpdoc')*-->
@@ -58,16 +61,16 @@ processors:
 <!--*codex:tabs({ tabPosition: 'left' })*-->
 <!--*codex:tab('Method Signature')*-->
 ```php
-<!--*codex:phpdoc:method:signature('Codex\Codex::get()', true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method-signature('Codex\Codex::get()', {hide: {namespace: true, tags: true} })*-->
 ````
-<!--*codex:phpdoc:method:signature('Codex\Codex::get()', true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method-signature('Codex\Codex::get()', {hide: {namespace: true, tags: true} })*-->
 <!--*codex:/tab*-->
 
 <!--*codex:tab('Method')*-->
 ```php
-<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method', true, true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method', { boxed: true, hide: {namespace: true, tags: true} })*-->
 ````
-<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method()', true, true, 'namespace,tags')*-->
+<!--*codex:phpdoc:method('Codex\Phpdoc\Documents\PhpdocMacros::method()', { boxed: true, hide: {namespace: true, tags: true} })*-->
 <!--*codex:/tab*-->
 
 <!--*codex:/tabs*-->

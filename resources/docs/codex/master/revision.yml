@@ -40,6 +40,7 @@ layout:
                     -   label   : Writing documentation
                         document: getting-started/writing-documentation
 
+
             -   label   : Writing Reference
                 icon    : pencil
                 children:
@@ -47,14 +48,11 @@ layout:
                         document: writing-reference/markdown-basics
                     -   label   : Markdown Extensions
                         document: writing-reference/markdown-extensions
-                    -   label   : UML
-                        document: writing-reference/uml
-                    -   label   : Charts
-                        document: writing-reference/charts
-                    -   label   : Diagrams
-                        document: writing-reference/diagrams
-                    -   label   : Mathematica
-                        document: writing-reference/mathematica
+                    -   label   : Code Render (UML, Charts, etc)
+                        document: writing-reference/code-render
+                    -   label   : HTML & Components
+                        document: writing-reference/html-components
+
 
             -   label   : Processors
                 icon    : cogs
@@ -67,6 +65,57 @@ layout:
                         document: processors/macros
                     -   label   : TOC
                         document: processors/toc
+                    -   label   : Parser
+                        document: processors/parser
+                    -   label   : Cache
+                        document: processors/cache
+
+
+            -   label   : Development
+                icon    : fa-code
+                children:
+                    -   label   : The Basics
+                        children:
+                            -   label   : Model
+                                document: development/model
+                            -   label   : ModelCollection
+                                document: development/model-collection
+                            -   label   : Codex
+                                document: development/codex
+                            -   label   : Project
+                                document: development/project
+                            -   label   : Revision
+                                document: development/revision
+                            -   label   : Document
+                                document: development/document
+                    -   label   : Digging Deeper
+                        children:
+                            -   label   : Attributes
+                                document: development/attributes
+                            -   label   : Api
+                                document: development/api
+                            -   label   : Addons
+                                document: development/addons
+                            -   label   : Events
+                                document: development/events
+                            -   label   : Hooks
+                                document: development/hooks
+                    -   label   : Rst Parser
+                        document: rst-parser
+
+
+            -   label   : Frontend
+                icon    : fa-code
+                children:
+                    -   label   : Introduction
+                        document: frontend/introduction
+                    -   label   : Theme
+                        document: frontend/theme
+                    -   label   : Components
+                        document: frontend/components
+                    -   label   : Development
+                        document: frontend/development
+
 
             -   label   : Addons
                 icon    : puzzle-piece
@@ -83,79 +132,18 @@ layout:
                         document: addons/filesystems
                     -   label   : Git
                         document: addons/git
-                    -   label   : Phpdoc
+                    -   label   : Packagist
+                        document: addons/packagist
+                    -   label   : PHPDoc
                         document: addons/phpdoc
                     -   label   : Sitemap
                         document: addons/sitemap
 
-
-            -   label   : Examples
+            -   label   : Contributing
                 icon    : fa-rocket
                 children:
-                    -   label   : Layout
-                        children:
-                            -   label   : Example 1
-                                document: examples/layout/example1
-                            -   label   : Example 2
-                                document: examples/layout/example2
-                            -   label   : Example 2
-                                document: examples/layout/example3
-
-            -   label   : Menu Test
-                icon    : fa-rocket
-                children:
-                    -   label   : Menu Level 1 Item 1
-                        icon    : fa-rocket
-                        children:
-                            -   label   : Menu Level 2 Item 1
-                                document: getting-started/installation
-                            -   label   : Menu Level 2 Item 2
-                                document: getting-started/configuration
-                            -   label   : Menu Level 2 Item 3
-                                document: getting-started/creating-a-project
-                            -   label   : Menu Level 2 Item 4
-                                icon    : fa-rocket
-                                children:
-                                    -   label   : Menu Level 3 Item 1
-                                        icon    : fa-rocket
-                                        document: getting-started/installation
-                                    -   label   : Menu Level 3 Item 2
-                                        icon    : fa-rocket
-                                        document: getting-started/configuration
-                                    -   label   : Menu Level 3 Item 3
-                                        icon    : fa-rocket
-                                        document: getting-started/creating-a-project
-                                    -   label   : Menu Level 3 Item 4
-                                        icon    : fa-rocket
-                                        children:
-                                            -   label   : Menu Level 4 Item 1
-                                                document: getting-started/installation
-                                            -   label   : Menu Level 4 Item 2
-                                                document: getting-started/configuration
-                                            -   label   : Menu Level 4 Item 3
-                                                document: getting-started/creating-a-project
-
-                    -   label   : Menu Level 1 Item 2
-                        icon    : fa-rocket
-                        children:
-                            -   label   : Menu Level 2 Item 1
-                                icon    : fa-rocket
-                                children:
-                                    -   label   : Installation
-                                        document: getting-started/installation
-                                    -   label   : Configuration
-                                        document: getting-started/configuration
-                                    -   label   : Creating a project
-                                        document: getting-started/creating-a-project
-
-                    -   label   : Installation
-                        document: getting-started/installation
-
-                    -   label   : Configuration
-                        document: getting-started/configuration
-
-                    -   label   : Creating a project
-                        document: getting-started/creating-a-project
+                    -   label   : Guidelines
+                        document: contributing/guidelines
 
             -   label   : License
                 icon    : legal

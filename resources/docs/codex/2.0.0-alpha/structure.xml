@@ -36748,7 +36748,7 @@ The processor should make use of $document-&gt;hasCachedContent() method to see 
         <full_name>\Codex\Processors\Macros\Macro::raw</full_name>
         <default></default>
         <docblock line="54">
-          <description>The raw macro string (eg: &lt;!--*codex:jira:issues:search('project="CODEX"', 54)*--&gt; or &lt;!--*codex:general:hide*--&gt; or &lt;!--*codex:/general:hide*--&gt;</description>
+          <description>The raw macro string (eg: &lt;!--*codex:jira:issues:search('project="CODEX"', 54)*--&gt; or &lt;!--*codex:hide*--&gt; or &lt;!--*codex:/hide*--&gt;</description>
           <long-description></long-description>
           <tag name="var" line="54" description="" type="string" variable="">
             <type>string</type>
@@ -36760,7 +36760,7 @@ The processor should make use of $document-&gt;hasCachedContent() method to see 
         <full_name>\Codex\Processors\Macros\Macro::definition</full_name>
         <default></default>
         <docblock line="60">
-          <description>The definition is how the macro key. Similair to how it is registered in the config (eg: 'jira:issues:search' or 'general:hide' or 'table:responsive')</description>
+          <description>The definition is how the macro key. Similair to how it is registered in the config (eg: 'jira:issues:search' or 'hide' or 'table:responsive')</description>
           <long-description></long-description>
           <tag name="var" line="60" description="" type="string" variable="">
             <type>string</type>
@@ -36795,7 +36795,7 @@ The processor should make use of $document-&gt;hasCachedContent() method to see 
         <name>extractDefinition</name>
         <full_name>\Codex\Processors\Macros\Macro::extractDefinition()</full_name>
         <docblock line="84">
-          <description>The definition is how the macro key. Similair to how it is registered in the config (eg: 'jira:issues:search' or 'general:hide' or 'table:responsive')</description>
+          <description>The definition is how the macro key. Similair to how it is registered in the config (eg: 'jira:issues:search' or 'hide' or 'table:responsive')</description>
           <long-description></long-description>
           <tag name="param" line="84" description="" type="string" variable="$cleaned">
             <type>string</type>

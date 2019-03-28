@@ -5,9 +5,7 @@ subtitle: Addons
 
 # Blog Addon
 
-Provides blogging capability with categories containing posts. 
-
-Uses similar features/logic/structure as projects, revisions and documents.  
+Generates a blog.xml
 
 
 ### Installation

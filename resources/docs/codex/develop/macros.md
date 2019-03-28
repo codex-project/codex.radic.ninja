@@ -7,9 +7,9 @@ title: Macros
 ## General
 #### Hide
 ```php
-<!--*codex:general:hide*-->
+<!--*codex:hide*-->
 > This content will be hidden
-<!--*codex:/general:hide*-->
+<!--*codex:/hide*-->
 ```
 
 ## PHPDoc

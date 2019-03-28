@@ -17,11 +17,11 @@ processors:
 
 # Codex Documentation
 
-<!--*codex:general:hide*-->
+<!--*codex:hide*-->
 
 > Head over to [codex-project.ninja](http://codex-project.ninja) for the full documentation (starting with this document) to get started.
 
-<!--*codex:/general:hide*-->
+<!--*codex:/hide*-->
 
 
 ## Introduction

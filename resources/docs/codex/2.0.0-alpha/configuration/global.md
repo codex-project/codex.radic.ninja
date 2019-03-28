@@ -172,7 +172,7 @@ Global defined macros. Check the [Macro Processor](../../processors/macros.md) p
 ```php
 [
     'table:responsive' => 'Codex\Addons\Processors\DocTags\Table@responsive',
-    'general:hide'     => 'Codex\Addons\Processors\DocTags\General@hide',
+    'hide'     => 'Codex\Addons\Processors\DocTags\General@hide',
     'attribute:print'  => 'Codex\Addons\Processors\DocTags\Attribute@printValue',
 ]
 ```

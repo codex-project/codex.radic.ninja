@@ -1,10 +1,9 @@
 ---
 title: Links
+subtitle: Processors
 ---
 
 # Links
-
-<!-- [Relative + Hash](../getting-started/installation.md#codex:doc[Link]) -->
 
 ### Transformations
 Links are transformed by the [](../../develop/links.md#codex:phpdoc['Codex\Documents\Processors\LinksProcessorExtension']:type:drawer:popover)

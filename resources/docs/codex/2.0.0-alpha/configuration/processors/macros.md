@@ -20,9 +20,9 @@ Codex can be considered as a documentation reading application. Though, you'll n
 It can do things like transforming markdown or fetching documentation from a Bitbucket/Github repository whenever you push and much more.
 Most of it's features are provided by addons. Codex is extenable, themeable, hackable and simple to setup and use.
 
-<!--*codex:general:hide*-->
+<!--*codex:hide*-->
 Head over to [codex-project.ninja](http://codex-project.ninja) for the full documentation (starting with this document) to get started.
-<!--*codex:/general:hide*-->
+<!--*codex:/hide*-->
 ```
 
 Codex will transform this into:
@@ -45,7 +45,7 @@ Inside the `config/codex.php` configuration file
 ```php
 [
     'macros' => [
-        'general:hide' => 'App\Macros\General@hide'
+        'hide' => 'App\Macros\General@hide'
     ]
 ]    
 ```
@@ -55,7 +55,7 @@ Inside the `docs/{project-name}/config.php` configuration file
 ```php
 [
     'macros' => [
-        'general:hide' => 'App\Macros\General@hide'
+        'hide' => 'App\Macros\General@hide'
     ]
 ]    
 ```
@@ -67,7 +67,7 @@ As document attributes:
 title: Example document
 subtitle: Examples
 macros:
-    'general:hide': App\Macros\General@hide
+    'hide': App\Macros\General@hide
 -->
 
 # Example document

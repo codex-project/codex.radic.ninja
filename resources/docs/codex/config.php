@@ -75,9 +75,69 @@ return [
 
     'default_revision' => \Codex\Git\BranchType::PRODUCTION,
 
+    'layout' => [
+        'toolbar' => [
+            'right' => [
+                [
+                    'component'  => 'c-button',
+                    'borderless' => true,
+                    'type'       => 'toolbar',
+                    'icon'       => 'star',
+                    'children'   => 'Packagist',
+                    'target'     => '_black',
+                    'title'      => 'Go to packagist package page',
+                    'href'       => 'https://packagist.org/packages/codex/codex',
+                ],
+            ],
+        ],
+    ],
+
     'phpdoc' => [
         'enabled'       => true,
         'default_class' => 'Codex\\Codex',
     ],
 
+    'git'       => [
+        'enabled'    => true,
+        'connection' => 'bitbucket_password',
+        'owner'      => 'codex-project',
+        'repository' => 'graph',
+        'branches'   => [], //[ 'master']
+        'paths'      => [
+            'docs' => 'develop/resources/docs/codex',
+        ],
+    ],
+    'git_links' => [
+        'enabled' => true,
+        'map'     => [
+            'edit_page' => 'layout.toolbar.right', // push attribute to array (default)
+        ],
+        'links'   => [
+            'edit_page' => [
+                'component'  => 'c-button',
+                'borderless' => true,
+                'type'       => 'toolbar',
+                'icon'       => function ($model) {
+                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
+                    $git        = $model->git();
+                    $connection = data_get($git->getManager()->getConnectionConfig($git->getConnection()), 'driver');
+                    if ($connection === 'bitbucket' || $connection === 'github') {
+                        return $connection;
+                    }
+                    return 'git';
+                },
+                'children'   => 'Edit Page',
+                'title'      => 'Edit this page',
+                'target'     => '_black',
+                'href'       => function ($model) {
+                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
+                    $git = $model->git();
+                    if ($model instanceof \Codex\Contracts\Documents\Document === false) {
+                        return $git->getUrl();
+                    }
+                    return $git->getDocumentUrl($model->getPath()) . '?mode=edit&spa=0&at=develop&fileviewer=file-view-default';
+                },
+            ],
+        ],
+    ],
 ];
