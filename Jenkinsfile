@@ -4,6 +4,8 @@
 node {
     stage('checkout') {
         checkout scm
+    }
+    stage('update submodule') {
         sh "git submodule update --init --remote --recursive laradock"
     }
     stage('docker-compose apache2') {
