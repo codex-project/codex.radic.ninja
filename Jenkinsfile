@@ -1,7 +1,7 @@
 #!groovy
 
 
-node('Docker Compose') {
+node {
     checkout scm
     stage('Build') {
         step([
