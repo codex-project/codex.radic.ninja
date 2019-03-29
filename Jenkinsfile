@@ -2,8 +2,11 @@
 
 
 node {
-    checkout scm
-    stage('Build') {
+    stage('checkout') {
+        checkout scm
+        sh "git submodule update --init --remote --recursive laradock"
+    }
+    stage('docker-compose apache2') {
         step([
             $class                    : 'DockerComposeBuilder',
             dockerComposeFile         : 'laradock/docker-compose.yml',
