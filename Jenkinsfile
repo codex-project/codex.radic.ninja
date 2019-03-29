@@ -6,7 +6,7 @@ node {
         checkout scm
     }
     stage('update submodule') {
-        sh "git submodule update --init --remote --recursive laradock"
+        sh "git submodule update --init --remote --recursive --force"
     }
     stage('set .env') {
         sh "mv .env.jenkins .env"
