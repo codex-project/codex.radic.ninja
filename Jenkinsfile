@@ -1,28 +1,6 @@
 #!/usr/bin/env groovy
 
 
-def backendSetEnv() {
-    stage('set env') {
-        sh '''
-cp -f .env.jenkins .env
-php artisan key:generate
-php artisan dotenv:set-key APP_URL codex.radic.ninja
-php artisan dotenv:set-key BACKEND_HOST $IPADDR
-php artisan dotenv:set-key BACKEND_PORT $BACKEND_PORT
-php artisan dotenv:set-key BACKEND_URL "http://$IPADDR:$BACKEND_PORT"
-php artisan dotenv:set-key CODEX_GIT_GITHUB_TOKEN $GITHUB_TOKEN
-php artisan dotenv:set-key CODEX_GIT_GITHUB_SECRET $GITHUB_TOKEN_SECRET
-php artisan dotenv:set-key CODEX_GIT_BITBUCKET_KEY $BITBUCKET_KEY
-php artisan dotenv:set-key CODEX_GIT_BITBUCKET_SECRET $BITBUCKET_KEY_SECRET
-
-php artisan dotenv:set-key CODEX_AUTH_GITHUB_ID $GITHUB_AUTH_ID
-php artisan dotenv:set-key CODEX_AUTH_GITHUB_SECRET $GITHUB_AUTH_SECRET
-php artisan dotenv:set-key CODEX_AUTH_BITBUCKET_ID $BITBUCKET_AUTH_ID
-php artisan dotenv:set-key CODEX_AUTH_BITBUCKET_SECRET $BITBUCKET_AUTH_SECRET
-'''
-    }
-}
-
 //noinspection GroovyAssignabilityCheck
 node {
     try {
@@ -47,9 +25,60 @@ node {
                 "BITBUCKET_AUTH_ID=${bitbucketAuthId}",
                 "BITBUCKET_AUTH_SECRET=${bitbucketAuthSecret}",
             ]) {
+
                 stage('checkout') {
                     checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
                 }
+
+                stage('install') {
+                    sh 'rm -rf ./vendor ./codex-addons'
+                    sh 'composer install --no-scripts'
+                    sh 'composer dump-autoload'
+                }
+
+                stage('set env') {
+                    sh '''
+cp -f .env.jenkins .env
+php artisan key:generate
+php artisan dotenv:set-key APP_URL codex.radic.ninja
+php artisan dotenv:set-key BACKEND_HOST $IPADDR
+php artisan dotenv:set-key BACKEND_PORT $BACKEND_PORT
+php artisan dotenv:set-key BACKEND_URL "http://$IPADDR:$BACKEND_PORT"
+php artisan dotenv:set-key CODEX_GIT_GITHUB_TOKEN $GITHUB_TOKEN
+php artisan dotenv:set-key CODEX_GIT_GITHUB_SECRET $GITHUB_TOKEN_SECRET
+php artisan dotenv:set-key CODEX_GIT_BITBUCKET_KEY $BITBUCKET_KEY
+php artisan dotenv:set-key CODEX_GIT_BITBUCKET_SECRET $BITBUCKET_KEY_SECRET
+
+php artisan dotenv:set-key CODEX_AUTH_GITHUB_ID $GITHUB_AUTH_ID
+php artisan dotenv:set-key CODEX_AUTH_GITHUB_SECRET $GITHUB_AUTH_SECRET
+php artisan dotenv:set-key CODEX_AUTH_BITBUCKET_ID $BITBUCKET_AUTH_ID
+php artisan dotenv:set-key CODEX_AUTH_BITBUCKET_SECRET $BITBUCKET_AUTH_SECRET
+'''
+                }
+                stage('enable addons') {
+                    sh '''
+# php artisan codex:addon:enable codex/algolia-search
+php artisan codex:addon:enable codex/auth
+# php artisan codex:addon:enable codex/blog
+php artisan codex:addon:enable codex/comments
+php artisan codex:addon:enable codex/filesystems
+php artisan codex:addon:enable codex/git
+php artisan codex:addon:enable codex/packagist
+php artisan codex:addon:enable codex/phpdoc
+php artisan codex:addon:enable codex/sitemap
+'''
+                }
+
+                stage('publish assets') {
+                    sh 'rm -rf public/vendor'
+                    sh 'php artisan vendor:publish --tag=public'
+                }
+
+
+                stage('phpdoc cache all') {
+                    sh 'php artisan codex:phpdoc:generate --all'
+                }
+
             }
         }
     } catch (e) {
