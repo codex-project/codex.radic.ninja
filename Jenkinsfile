@@ -1,8 +1,14 @@
 #!/usr/bin/env groovy
 
+def extWorkspace = exwsAllocate(diskPoolId: 'diskpool1')
 
 //noinspection GroovyAssignabilityCheck
 node {
+
+//    exws(extWorkspace){}
+    /*
+     * @var asdf
+     */
     try {
         //noinspection GroovyAssignabilityCheck
         withCredentials([
@@ -27,7 +33,6 @@ node {
             ]) {
 
                 stage('Checkout') {
-
                     checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
                 }
 
@@ -83,6 +88,19 @@ php artisan codex:addon:enable codex/sitemap
                 stage('Run Checks') {
                     sh 'composer checks'
                 }
+
+                stage('Deploy') {
+                    sh 'rm -f build.tar.gz'
+                    sh '''
+tar --exclude-vcs --exclude-vcs-ignores -czvf build.tar.gz \
+    app bootstrap config database routes artisan server.php \
+    codex-addons vendor storage resources public \
+    composer.json composer.lock .env 
+'''
+                    archiveArtifacts([artifacts: 'build.tar.gz', onlyIfSuccessful: true])
+                }
+
+
             }
         }
     } catch (e) {

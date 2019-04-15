@@ -26,6 +26,29 @@ restart(){
     start-supervisor
 }
 
+create-archive2(){
+    rm -f archive.tar
+    tar --exclude-vcs --exclude-vcs-ignores -cvf archive.tar \
+        app bootstrap config database routes artisan server.php
+
+    tar --exclude-vcs -rvf archive.tar \
+        codex-addons vendor storage resources public \
+        .env composer.json composer.lock
+
+}
+
+
+
+create-archive(){
+    rm -f archive.tar.gz
+    tar --exclude-vcs --exclude-vcs-ignores -czvf archive.tar.gz \
+        app bootstrap config database routes artisan server.php \
+        codex-addons vendor storage resources public \
+        .env composer.json composer.lock
+
+
+
+}
 
 
 $*
