@@ -1,6 +1,7 @@
-#!groovy
+#!/usr/bin/env groovy
 
 
+//noinspection GroovyAssignabilityCheck
 node {
     stage('checkout') {
         checkout scm
@@ -13,11 +14,7 @@ node {
         sh "mv laradock/.env.jenkins laradock/.env"
     }
     stage('docker-compose apache2') {
-        step([
-            $class                    : 'DockerComposeBuilder',
-            dockerComposeFile         : 'laradock/docker-compose.yml',
-            option                    : [$class: 'StartService', scale: 1, service: 'apache2'],
-            useCustomDockerComposeFile: true
-        ])
+        sh "cd laradock"
+        sh "docker-compose up -d apache"
     }
 }

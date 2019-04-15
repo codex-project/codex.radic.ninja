@@ -1,5 +1,0 @@
-[submodule "laradock"]
-	path = laradock
-	url = bitbucket.org:codex-project/laradock-codex
-    branch = master
-

@@ -7,9 +7,6 @@
         "laravel"
     ],
     "license": "MIT",
-    "repositories": [
-        {"type": "composer", "url": "http://localhost:8999"}
-    ],
     "require": {
         "php": "^7.1.3",
         "beyondcode/laravel-self-diagnosis": "^1.0",
@@ -118,5 +115,11 @@
         "post-update-cmd": [
             "bash scripts.sh restart"
         ]
+    },
+    "repositories": {
+        "radic": {
+            "type": "composer",
+            "url": "https://packages.radic.ninja"
+        }
     }
 }
