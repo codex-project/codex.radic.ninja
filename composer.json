@@ -40,14 +40,6 @@
         "nunomaduro/collision": "^2.0",
         "phpunit/phpunit": "^7.0"
     },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "secure-http": false,
-        "cache-ttl": 1,
-        "cache-dir": ".tmp/cache"
-    },
     "extra": {
         "laravel": {
             "dont-discover": []
