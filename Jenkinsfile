@@ -27,6 +27,7 @@ node {
             ]) {
 
                 stage('Checkout') {
+
                     checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
                 }
 
