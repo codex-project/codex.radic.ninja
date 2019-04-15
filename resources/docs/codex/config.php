@@ -109,35 +109,35 @@ return [
     ],
     'git_links' => [
         'enabled' => true,
-        'map'     => [
-            'edit_page' => 'layout.toolbar.right', // push attribute to array (default)
-        ],
-        'links'   => [
-            'edit_page' => [
-                'component'  => 'c-button',
-                'borderless' => true,
-                'type'       => 'toolbar',
-                'icon'       => function ($model) {
-                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
-                    $git        = $model->git();
-                    $connection = data_get($git->getManager()->getConnectionConfig($git->getConnection()), 'driver');
-                    if ($connection === 'bitbucket' || $connection === 'github') {
-                        return $connection;
-                    }
-                    return 'git';
-                },
-                'children'   => 'Edit Page',
-                'title'      => 'Edit this page',
-                'target'     => '_black',
-                'href'       => function ($model) {
-                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
-                    $git = $model->git();
-                    if ($model instanceof \Codex\Contracts\Documents\Document === false) {
-                        return $git->getUrl();
-                    }
-                    return $git->getDocumentUrl($model->getPath()) . '?mode=edit&spa=0&at=develop&fileviewer=file-view-default';
-                },
-            ],
-        ],
+//        'map'     => [
+//            'edit_page' => 'layout.toolbar.right', // push attribute to array (default)
+//        ],
+//        'links'   => [
+//            'edit_page' => [
+//                'component'  => 'c-button',
+//                'borderless' => true,
+//                'type'       => 'toolbar',
+//                'icon'       => function ($model) {
+//                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
+//                    $git        = $model->git();
+//                    $connection = data_get($git->getManager()->getConnectionConfig($git->getConnection()), 'driver');
+//                    if ($connection === 'bitbucket' || $connection === 'github') {
+//                        return $connection;
+//                    }
+//                    return 'git';
+//                },
+//                'children'   => 'Edit Page',
+//                'title'      => 'Edit this page',
+//                'target'     => '_black',
+//                'href'       => function ($model) {
+//                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
+//                    $git = $model->git();
+//                    if ($model instanceof \Codex\Contracts\Documents\Document === false) {
+//                        return $git->getUrl();
+//                    }
+//                    return $git->getDocumentUrl($model->getPath()) . '?mode=edit&spa=0&at=develop&fileviewer=file-view-default';
+//                },
+//            ],
+//        ],
     ],
 ];
