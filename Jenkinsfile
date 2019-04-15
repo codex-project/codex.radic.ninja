@@ -89,13 +89,13 @@ php artisan codex:addon:enable codex/sitemap
                     sh 'composer checks'
                 }
 
-                stage('Deploy') {
+                stage('Archive Artifact') {
                     sh 'rm -f build.tar.gz'
                     sh '''
 tar --exclude-vcs --exclude-vcs-ignores -czvf build.tar.gz \
     app bootstrap config database routes artisan server.php \
     codex-addons vendor storage resources public \
-    composer.json composer.lock .env 
+    composer.json composer.lock .env codex.supervisor.conf
 '''
                     archiveArtifacts([artifacts: 'build.tar.gz', onlyIfSuccessful: true])
                 }
