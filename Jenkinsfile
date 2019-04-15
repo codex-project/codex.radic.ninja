@@ -54,6 +54,7 @@ php artisan dotenv:set-key --force CODEX_AUTH_GITHUB_ID $GITHUB_AUTH_ID
 php artisan dotenv:set-key --force CODEX_AUTH_GITHUB_SECRET $GITHUB_AUTH_SECRET
 php artisan dotenv:set-key --force CODEX_AUTH_BITBUCKET_ID $BITBUCKET_AUTH_ID
 php artisan dotenv:set-key --force CODEX_AUTH_BITBUCKET_SECRET $BITBUCKET_AUTH_SECRET
+php artisan storage:link
 '''
                 }
                 stage('Enable Codex Addons') {
@@ -79,6 +80,9 @@ php artisan codex:addon:enable codex/sitemap
                     sh 'composer optimize'
                 }
 
+                stage('Run Checks') {
+                    sh 'composer checks'
+                }
             }
         }
     } catch (e) {
