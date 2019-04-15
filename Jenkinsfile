@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def extWorkspace = exwsAllocate(diskPoolId: 'diskpool1')
+//def extWorkspace = exwsAllocate(diskPoolId: 'diskpool1')
 
 //noinspection GroovyAssignabilityCheck
 node {
