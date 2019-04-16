@@ -32,6 +32,7 @@ node {
             ]) {
 
                 stage('Checkout') {
+
                     def scmVars = checkout([
                         $class: 'GitSCM',
                         branches: scm.branches,
