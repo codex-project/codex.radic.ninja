@@ -107,46 +107,46 @@ tar --exclude-vcs --exclude-vcs-ignores -cvf build.tar \
                 }
 
 
-                stage('Deploy') {
-                    currentBuild.result = 'SUCCESS'
-                    try {
-                        //timeout(time: 10, unit: 'MINUTES')
-                        //noinspection GroovyAssignabilityCheck
-                        def INPUT_PARAMS = input([
-                            id        : 'DeployInput',
-                            message   : 'Deploy to target "codex.radic.ninja"?',
-                            ok        : 'Ok',
-                            parameters: [
-                                booleanParam(defaultValue: false, description: 'Enable to deploy to target', name: 'INPUT_DEPLOY'),
-                                choice(choices: ['production', 'staging', 'development'], description: '''Select deployment target<br><br>
-<strong>production</strong>  - codex.radic.ninja<br>
-<strong>staging</strong>     - staging.radic.ninja<br>
-<strong>development</strong> - jenkins.radic.ninja:9951<br>''', name: 'INPUT_DEPLOY_TARGET'),
-                            ]
-                        ])
-                        echo "INPUT_DEPLOY: ${INPUT_PARAMS.INPUT_DEPLOY}"
-                        echo "INPUT_DEPLOY_TARGET: ${INPUT_PARAMS.INPUT_DEPLOY_TARGET}"
-
-                        if (INPUT_PARAMS.INPUT_DEPLOY == true) {
-                            //noinspection GroovyAssignabilityCheck
-                            def buildOb = build([
-                                job        : 'codex/deploy/codex.radic.ninja',
-                                parameters : [
-                                    run(description: '', name: 'DEPLOY_SOURCE', runId: "codex/codex.radic.ninja#${env.BUILD_NUMBER}")
-                                ],
-                                propagate  : false,
-                                quietPeriod: 10,
-                                wait       : false
-                            ])
-                            echo buildOb.toString()
-                        }
-
-                    } catch (e) {
-                        echo e.getMessage()
-                    } finally {
-                        currentBuild.result = 'SUCCESS'
-                    }
-                }
+//                stage('Deploy') {
+//                    currentBuild.result = 'SUCCESS'
+//                    try {
+//                        //timeout(time: 10, unit: 'MINUTES')
+//                        //noinspection GroovyAssignabilityCheck
+//                        def INPUT_PARAMS = input([
+//                            id        : 'DeployInput',
+//                            message   : 'Deploy to target "codex.radic.ninja"?',
+//                            ok        : 'Ok',
+//                            parameters: [
+//                                booleanParam(defaultValue: false, description: 'Enable to deploy to target', name: 'INPUT_DEPLOY'),
+//                                choice(choices: ['production', 'staging', 'development'], description: '''Select deployment target<br><br>
+//<strong>production</strong>  - codex.radic.ninja<br>
+//<strong>staging</strong>     - staging.radic.ninja<br>
+//<strong>development</strong> - jenkins.radic.ninja:9951<br>''', name: 'INPUT_DEPLOY_TARGET'),
+//                            ]
+//                        ])
+//                        echo "INPUT_DEPLOY: ${INPUT_PARAMS.INPUT_DEPLOY}"
+//                        echo "INPUT_DEPLOY_TARGET: ${INPUT_PARAMS.INPUT_DEPLOY_TARGET}"
+//
+//                        if (INPUT_PARAMS.INPUT_DEPLOY == true) {
+//                            //noinspection GroovyAssignabilityCheck
+//                            def buildOb = build([
+//                                job        : 'codex/deploy/codex.radic.ninja',
+//                                parameters : [
+//                                    run(description: '', name: 'DEPLOY_SOURCE', runId: "codex/codex.radic.ninja#${env.BUILD_NUMBER}")
+//                                ],
+//                                propagate  : false,
+//                                quietPeriod: 10,
+//                                wait       : false
+//                            ])
+//                            echo buildOb.toString()
+//                        }
+//
+//                    } catch (e) {
+//                        echo e.getMessage()
+//                    } finally {
+//                        currentBuild.result = 'SUCCESS'
+//                    }
+//                }
 
             }
         }
