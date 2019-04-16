@@ -32,8 +32,12 @@ node {
             ]) {
 
                 stage('Checkout') {
-
-                    def scmVars = checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
+                    def scmVars = checkout([
+                        $class: 'GitSCM',
+                        branches: scm.branches,
+                        extensions: scm.extensions + [[$class: 'WipeWorkspace']],
+                        userRemoteConfigs: scm.userRemoteConfigs,
+                    ])
                     currentBuild.displayName = "build(${env.BUILD_NUMBER}) branch(${scmVars.GIT_BRANCH}) ref(${scmVars.GIT_COMMIT})"
                 }
 
@@ -98,40 +102,15 @@ tar --exclude-vcs --exclude-vcs-ignores -cvf build.tar \
     codex-addons vendor storage resources public \
     composer.json composer.lock .env codex.supervisor.conf
 '''
-//                    String artifacts = [
-//                        'app/**',
-//                        'bootstrap/**',
-//                        'config/**',
-//                        'database/**',
-//                        'routes/**',
-//                        'codex-addons/**',
-//                        'vendor/**',
-//                        'storage/**',
-//                        'resources/**',
-//                        'public/**',
-//                        'artisan',
-//                        'server.php',
-//                        'composer.json',
-//                        'composer.lock',
-//                        '.env',
-//                        'codex.supervisor.conf'
-//                    ].join(', ')
-//
-//                    String excludes = [
-//                        'storage/app/public/*'
-//                    ].join(',')
-
                     archiveArtifacts([artifacts: 'build.tar', onlyIfSuccessful: true])
-//                    archiveArtifacts([artifacts: artifacts, onlyIfSuccessful: true])
                 }
 
 
                 stage('Deploy') {
                     currentBuild.result = 'SUCCESS'
                     try {
-//                        def INPUT_PARAMS
-//                        def DEPLOY_BUILD_NUMBER = params.DEPLOY_SOURCE.split('/').last()
-//                        timeout(time: 10, unit: 'MINUTES') {
+                        //timeout(time: 10, unit: 'MINUTES')
+                        //noinspection GroovyAssignabilityCheck
                         def INPUT_PARAMS = input([
                             id        : 'DeployInput',
                             message   : 'Deploy to target "codex.radic.ninja"?',
@@ -148,6 +127,7 @@ tar --exclude-vcs --exclude-vcs-ignores -cvf build.tar \
                         echo "INPUT_DEPLOY_TARGET: ${INPUT_PARAMS.INPUT_DEPLOY_TARGET}"
 
                         if (INPUT_PARAMS.INPUT_DEPLOY == true) {
+                            //noinspection GroovyAssignabilityCheck
                             def buildOb = build([
                                 job        : 'codex/deploy/codex.radic.ninja',
                                 parameters : [
