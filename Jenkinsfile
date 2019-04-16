@@ -36,6 +36,8 @@ node {
                     checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
                 }
 
+                currentBuild.displayName = "build(${env.BUILD_NUMBER}) branch(${env.GIT_BRANCH}) ref(${env.GIT_COMMIT})"
+
                 stage('Install Dependencies') {
                     sh 'rm -rf ./vendor ./codex-addons'
                     sh 'composer install --no-scripts'
@@ -119,10 +121,37 @@ tar --exclude-vcs --exclude-vcs-ignores -czvf build.tar.gz \
                         'storage/app/public/*'
                     ].join(',')
 
-                    archiveArtifacts([artifacts: 'build.tar.gz', onlyIfSuccessful: true])
+//                    archiveArtifacts([artifacts: 'build.tar.gz', onlyIfSuccessful: true])
                     archiveArtifacts([artifacts: artifacts, onlyIfSuccessful: true])
                 }
 
+
+                stage('Deploy') {
+                    currentBuild.result = 'SUCCESS'
+                    try {
+//                        def INPUT_PARAMS
+
+//                        timeout(time: 10, unit: 'MINUTES') {
+                            def INPUT_PARAMS = input([
+                                id        : 'DeployInput',
+                                message   : 'Deploy to target "codex.radic.ninja"?',
+                                ok        : 'Start',
+                                parameters: [
+                                    booleanParam(defaultValue: false, description: 'Enable to deploy to target', name: 'INPUT_DEPLOY'),
+                                    choice(choices: ['production', 'staging', 'development'], description: '''Select deployment target<br><br>
+<strong>production</strong>  - codex.radic.ninja<br>
+<strong>staging</strong>     - staging.radic.ninja<br>
+<strong>development</strong> - jenkins.radic.ninja:9951<br>''', name: 'INPUT_DEPLOY_TARGET'),
+                                ]
+                            ])
+                            echo "INPUT_DEPLOY: ${INPUT_PARAMS.INPUT_DEPLOY}"
+                            echo "INPUT_DEPLOY_TARGET: ${INPUT_PARAMS.INPUT_DEPLOY_TARGET}"
+                    }catch(e){
+                        echo e.getMessage()
+                    } finally {
+                        currentBuild.result = 'SUCCESS'
+                    }
+                }
 
             }
         }
