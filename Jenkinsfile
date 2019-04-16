@@ -1,13 +1,7 @@
 #!/usr/bin/env groovy
-//def extWorkspace = exwsAllocate(diskPoolId: 'diskpool1')
 
 //noinspection GroovyAssignabilityCheck
 node {
-
-//    exws(extWorkspace){}
-    /*
-     * @var asdf
-     */
     try {
         //noinspection GroovyAssignabilityCheck
         withCredentials([
@@ -108,6 +102,14 @@ tar --exclude-vcs --exclude-vcs-ignores -cvf build.tar \
 '''
                     archiveArtifacts([artifacts: 'build.tar', onlyIfSuccessful: true])
                 }
+            }
+        }
+    } catch (e) {
+        throw e
+    } finally {
+        echo "done"
+    }
+}
 
 
 //                stage('Deploy') {
@@ -150,12 +152,3 @@ tar --exclude-vcs --exclude-vcs-ignores -cvf build.tar \
 //                        currentBuild.result = 'SUCCESS'
 //                    }
 //                }
-
-            }
-        }
-    } catch (e) {
-        throw e
-    } finally {
-        echo "done"
-    }
-}
