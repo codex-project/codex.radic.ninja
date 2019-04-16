@@ -40,11 +40,13 @@ create-archive2(){
 
 
 create-archive(){
-    rm -f archive.tar.gz
-    tar --exclude-vcs --exclude-vcs-ignores -czvf archive.tar.gz \
-        app bootstrap config database routes artisan server.php \
-        codex-addons vendor storage resources public \
-        .env composer.json composer.lock
+    rm -f build.tar
+tar --exclude-vcs --exclude-vcs-ignores -cvf build.tar \
+    app bootstrap config database routes \
+    codex-addons vendor vendor/myclabs/php-enum/* \
+    storage resources public \
+    artisan server.php \
+    composer.json composer.lock .env codex.supervisor.conf
 
 
 

@@ -99,8 +99,10 @@ php artisan codex:addon:enable codex/sitemap
                 stage('Archive Artifact') {
                     sh '''
 tar --exclude-vcs --exclude-vcs-ignores -cvf build.tar \
-    app bootstrap config database routes artisan server.php \
-    codex-addons vendor storage resources public \
+    app bootstrap config database routes \
+    codex-addons vendor vendor/myclabs/php-enum/* \
+    storage resources public \
+    artisan server.php \
     composer.json composer.lock .env codex.supervisor.conf
 '''
                     archiveArtifacts([artifacts: 'build.tar', onlyIfSuccessful: true])
