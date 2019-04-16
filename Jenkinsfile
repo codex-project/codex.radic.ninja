@@ -95,7 +95,7 @@ php artisan codex:addon:enable codex/sitemap
 tar --exclude-vcs --exclude-vcs-ignores -cvf build.tar \
     app bootstrap config database routes \
     codex-addons vendor vendor/myclabs/php-enum/* \
-    storage storage/app/public/* \
+    storage \
     resources public \
     artisan server.php \
     composer.json composer.lock .env codex.supervisor.conf
