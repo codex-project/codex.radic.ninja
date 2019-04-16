@@ -1,5 +1,4 @@
 #!/usr/bin/env groovy
-
 //def extWorkspace = exwsAllocate(diskPoolId: 'diskpool1')
 
 //noinspection GroovyAssignabilityCheck
@@ -33,10 +32,11 @@ node {
             ]) {
 
                 stage('Checkout') {
-                    checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
+
+                    def scmVars = checkout([$class: 'GitSCM', branches: scm.branches, extensions: scm.extensions + [[$class: 'WipeWorkspace']], userRemoteConfigs: scm.userRemoteConfigs,]) //                    checkout scm
+                    currentBuild.displayName = "build(${env.BUILD_NUMBER}) branch(${scmVars.GIT_BRANCH}) ref(${scmVars.GIT_COMMIT})"
                 }
 
-                currentBuild.displayName = "build(${env.BUILD_NUMBER}) branch(${env.GIT_BRANCH}) ref(${env.GIT_COMMIT})"
 
                 stage('Install Dependencies') {
                     sh 'rm -rf ./vendor ./codex-addons'
@@ -92,12 +92,12 @@ php artisan codex:addon:enable codex/sitemap
                 }
 
                 stage('Archive Artifact') {
-                    sh '''
-tar --exclude-vcs --exclude-vcs-ignores -czvf build.tar.gz \
-    app bootstrap config database routes artisan server.php \
-    codex-addons vendor storage resources public \
-    composer.json composer.lock .env codex.supervisor.conf
-'''
+//                    sh '''
+//tar --exclude-vcs --exclude-vcs-ignores -czvf build.tar.gz \
+//    app bootstrap config database routes artisan server.php \
+//    codex-addons vendor storage resources public \
+//    composer.json composer.lock .env codex.supervisor.conf
+//'''
                     String artifacts = [
                         'app/**',
                         'bootstrap/**',
@@ -130,23 +130,37 @@ tar --exclude-vcs --exclude-vcs-ignores -czvf build.tar.gz \
                     currentBuild.result = 'SUCCESS'
                     try {
 //                        def INPUT_PARAMS
-
+//                        def DEPLOY_BUILD_NUMBER = params.DEPLOY_SOURCE.split('/').last()
 //                        timeout(time: 10, unit: 'MINUTES') {
-                            def INPUT_PARAMS = input([
-                                id        : 'DeployInput',
-                                message   : 'Deploy to target "codex.radic.ninja"?',
-                                ok        : 'Start',
-                                parameters: [
-                                    booleanParam(defaultValue: false, description: 'Enable to deploy to target', name: 'INPUT_DEPLOY'),
-                                    choice(choices: ['production', 'staging', 'development'], description: '''Select deployment target<br><br>
+                        def INPUT_PARAMS = input([
+                            id        : 'DeployInput',
+                            message   : 'Deploy to target "codex.radic.ninja"?',
+                            ok        : 'Ok',
+                            parameters: [
+                                booleanParam(defaultValue: false, description: 'Enable to deploy to target', name: 'INPUT_DEPLOY'),
+                                choice(choices: ['production', 'staging', 'development'], description: '''Select deployment target<br><br>
 <strong>production</strong>  - codex.radic.ninja<br>
 <strong>staging</strong>     - staging.radic.ninja<br>
 <strong>development</strong> - jenkins.radic.ninja:9951<br>''', name: 'INPUT_DEPLOY_TARGET'),
-                                ]
+                            ]
+                        ])
+                        echo "INPUT_DEPLOY: ${INPUT_PARAMS.INPUT_DEPLOY}"
+                        echo "INPUT_DEPLOY_TARGET: ${INPUT_PARAMS.INPUT_DEPLOY_TARGET}"
+
+                        if (INPUT_PARAMS.INPUT_DEPLOY == true) {
+                            def buildOb = build([
+                                job        : 'codex/deploy/codex.radic.ninja',
+                                parameters : [
+                                    run(description: '', name: 'DEPLOY_SOURCE', runId: "codex/codex.radic.ninja#${env.BUILD_NUMBER}")
+                                ],
+                                propagate  : false,
+                                quietPeriod: 10,
+                                wait       : false
                             ])
-                            echo "INPUT_DEPLOY: ${INPUT_PARAMS.INPUT_DEPLOY}"
-                            echo "INPUT_DEPLOY_TARGET: ${INPUT_PARAMS.INPUT_DEPLOY_TARGET}"
-                    }catch(e){
+                            echo buildOb.toString()
+                        }
+
+                    } catch (e) {
                         echo e.getMessage()
                     } finally {
                         currentBuild.result = 'SUCCESS'
