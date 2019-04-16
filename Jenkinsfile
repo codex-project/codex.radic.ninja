@@ -90,14 +90,37 @@ php artisan codex:addon:enable codex/sitemap
                 }
 
                 stage('Archive Artifact') {
-                    sh 'rm -f build.tar.gz'
                     sh '''
 tar --exclude-vcs --exclude-vcs-ignores -czvf build.tar.gz \
     app bootstrap config database routes artisan server.php \
     codex-addons vendor storage resources public \
     composer.json composer.lock .env codex.supervisor.conf
 '''
+                    String artifacts = [
+                        'app/**',
+                        'bootstrap/**',
+                        'config/**',
+                        'database/**',
+                        'routes/**',
+                        'codex-addons/**',
+                        'vendor/**',
+                        'storage/**',
+                        'resources/**',
+                        'public/**',
+                        'artisan',
+                        'server.php',
+                        'composer.json',
+                        'composer.lock',
+                        '.env',
+                        'codex.supervisor.conf'
+                    ].join(', ')
+
+                    String excludes = [
+                        'storage/app/public/*'
+                    ].join(',')
+
                     archiveArtifacts([artifacts: 'build.tar.gz', onlyIfSuccessful: true])
+                    archiveArtifacts([artifacts: artifacts, onlyIfSuccessful: true])
                 }
 
 
