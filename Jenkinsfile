@@ -38,7 +38,7 @@ node {
 
 
                 stage('Install Dependencies') {
-                    sh 'rm -rf ./vendor ./codex-addons'
+                    sh 'rm -rf ./vendor ./codex-addons composer.lock'
                     sh 'composer install --no-scripts'
                     sh 'composer dump-autoload'
                 }
