@@ -65,7 +65,6 @@ php artisan dotenv:set-key --force CODEX_AUTH_GITHUB_ID $GITHUB_AUTH_ID
 php artisan dotenv:set-key --force CODEX_AUTH_GITHUB_SECRET $GITHUB_AUTH_SECRET
 php artisan dotenv:set-key --force CODEX_AUTH_BITBUCKET_ID $BITBUCKET_AUTH_ID
 php artisan dotenv:set-key --force CODEX_AUTH_BITBUCKET_SECRET $BITBUCKET_AUTH_SECRET
-php artisan storage:link
 '''
                 }
                 stage('Enable Codex Addons') {
@@ -82,10 +81,7 @@ php artisan codex:addon:enable codex/sitemap
 '''
                 }
 
-                parallel 'Publish Assets': {
-                    sh 'rm -rf public/vendor'
-                    sh 'php artisan vendor:publish --tag=public -vvv'
-                }, 'Create PHPDoc Manifests': {
+                parallel 'Create PHPDoc Manifests': {
                     sh 'php artisan codex:phpdoc:generate --all -vvv'
                 }, 'Optimize': {
                     sh 'composer optimize'
