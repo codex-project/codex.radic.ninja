@@ -89,7 +89,10 @@ php artisan codex:addon:enable codex/sitemap
                 }
 
                 stage('Run Checks') {
+                    sh 'php artisan vendor:publish --tag=public -vvv'
+                    sh 'php artisan storage:link --force -vvv'
                     sh 'composer checks'
+                    sh 'rm -rf vendor/public vendor/storage'
                 }
 
                 stage('Archive Artifact') {
