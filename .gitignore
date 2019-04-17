@@ -25,3 +25,4 @@ yarn-error.log
 /.idea
 /jenkins
 /build.tar
+/jenkins-shared
