@@ -22,15 +22,15 @@ node {
             }
 
             parallel 'Create PHPDoc Manifests': {
-                sh 'php artisan codex:phpdoc:generate --all -vvv'
+                backend.artisan('codex:phpdoc:generate --all')
             }, 'Optimize': {
                 sh 'composer optimize'
             }
 
             stage('Run Checks') {
                 sh 'rm -rf vendor/public vendor/storage'
-                sh 'php artisan vendor:publish --force --tag=public -vvv'
-                sh 'php artisan storage:link -vvv'
+                backend.artisan('vendor:publish --force --tag=public')
+                backend.artisan('storage:link')
                 sh 'composer checks'
                 sh 'rm -rf vendor/public vendor/storage'
             }
