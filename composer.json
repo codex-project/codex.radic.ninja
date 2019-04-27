@@ -1,15 +1,12 @@
 {
-    "name": "codex/codex",
+    "name": "codex/website",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "The Codex website",
     "keywords": [
         "framework",
         "laravel"
     ],
     "license": "MIT",
-    "repositories": [
-        {"type": "composer", "url": "https://packages.radic.ninja"}
-    ],
     "require": {
         "php": "^7.1.3",
         "beyondcode/laravel-self-diagnosis": "^1.0",
