@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fafebf02f5ee90e89521ae1f77918c8",
+    "content-hash": "38a1edc529d85a9f106cde2c1316a28e",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -447,8 +447,14 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/algolia-search",
-                "reference": "2502871063ed2141e0b880a3b808efc6f3c1ffbf"
+                "url": "https://github.com/codex-project/algolia-search.git",
+                "reference": "4d1a8bd983a2c6397ef7bff0016b059c0e81ee84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/algolia-search/zipball/4d1a8bd983a2c6397ef7bff0016b059c0e81ee84",
+                "reference": "4d1a8bd983a2c6397ef7bff0016b059c0e81ee84",
+                "shasum": ""
             },
             "require": {
                 "codex/core": "~2.0",
@@ -481,6 +487,7 @@
                     "Codex\\AlgoliaSearch\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -502,22 +509,21 @@
                 "markdown",
                 "search"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/algolia-search",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:24:19+00:00"
         },
         {
             "name": "codex/auth",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/auth",
-                "reference": "18a7eb94d30f5a48b4d93c1b84e6c8f03e979c6d"
+                "url": "https://github.com/codex-project/auth.git",
+                "reference": "580310797c5d3e00ad6e9ad167e69a54bc08c134"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/auth/zipball/580310797c5d3e00ad6e9ad167e69a54bc08c134",
+                "reference": "580310797c5d3e00ad6e9ad167e69a54bc08c134",
+                "shasum": ""
             },
             "require": {
                 "codex/core": "~2.0",
@@ -549,6 +555,7 @@
                     "Codex\\Auth\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -563,8 +570,8 @@
             "description": "Codex Addon - Provides authentication using oauth providers (socialite) to restrict project access",
             "homepage": "https://codex.radic.ninja",
             "keywords": [
+                "Authentication",
                 "auth",
-                "authentication",
                 "authorisation",
                 "codex",
                 "documentation",
@@ -575,22 +582,21 @@
                 "social",
                 "socialite"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/auth",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:24:19+00:00"
         },
         {
             "name": "codex/blog",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/blog",
-                "reference": "68d2b0e48f52bad604dae80312859516413b9633"
+                "url": "https://github.com/codex-project/blog.git",
+                "reference": "b47773f15be3934541a4c9b0a651d1ef845104b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/blog/zipball/b47773f15be3934541a4c9b0a651d1ef845104b5",
+                "reference": "b47773f15be3934541a4c9b0a651d1ef845104b5",
+                "shasum": ""
             },
             "require": {
                 "codex/core": "~2.0"
@@ -621,6 +627,7 @@
                     "Codex\\Blog\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -644,22 +651,21 @@
                 "post",
                 "posts"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/blog",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:24:19+00:00"
         },
         {
             "name": "codex/comments",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/comments",
-                "reference": "161dc156c8de7c1d1dd2249c09636a13b3fd8d50"
+                "url": "https://github.com/codex-project/comments.git",
+                "reference": "f18b30be257746e47e95a9f35076fc3deaefeb93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/comments/zipball/f18b30be257746e47e95a9f35076fc3deaefeb93",
+                "reference": "f18b30be257746e47e95a9f35076fc3deaefeb93",
+                "shasum": ""
             },
             "require": {
                 "codex/core": "~2.0"
@@ -690,6 +696,7 @@
                     "Codex\\Comments\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -712,22 +719,21 @@
                 "markdown",
                 "reactions"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/comments",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:24:19+00:00"
         },
         {
             "name": "codex/composer-plugin",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/composer-plugin",
-                "reference": "3bf38d1689555feeca12e1f6fc6c9c50f1c41575"
+                "url": "https://github.com/codex-project/composer-plugin.git",
+                "reference": "84a7d68ea61765d3abf655b534100005f616a2df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/composer-plugin/zipball/84a7d68ea61765d3abf655b534100005f616a2df",
+                "reference": "84a7d68ea61765d3abf655b534100005f616a2df",
+                "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0"
@@ -750,6 +756,7 @@
                     "Codex\\ComposerPlugin\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -771,22 +778,21 @@
                 "markdown",
                 "plugin"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/composer-plugin",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:24:19+00:00"
         },
         {
             "name": "codex/core",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/core",
-                "reference": "8498d70d2241e8c5043f08de0b36444eb07fc295"
+                "url": "https://github.com/codex-project/core.git",
+                "reference": "b2cf4ff293e2f215bf7060ed84947aba8f407250"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/core/zipball/b2cf4ff293e2f215bf7060ed84947aba8f407250",
+                "reference": "b2cf4ff293e2f215bf7060ed84947aba8f407250",
+                "shasum": ""
             },
             "require": {
                 "barryvdh/laravel-cors": "~0.9",
@@ -811,6 +817,7 @@
                 "symfony/config": "~4.0",
                 "symfony/expression-language": "~3.0|~4.0",
                 "symfony/yaml": "~2.7|~3.0|~4.0",
+                "webmozart/glob": "~4.1",
                 "webuni/commonmark-attributes-extension": "~0.6",
                 "webuni/commonmark-table-extension": "~0.9",
                 "zendframework/zend-config": "3.2.*",
@@ -849,11 +856,7 @@
                     "Codex\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Codex\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -873,22 +876,21 @@
                 "laravel",
                 "markdown"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/core",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:41:44+00:00"
         },
         {
             "name": "codex/filesystems",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/filesystems",
-                "reference": "6bb533b68aa35a4b0e29dcd14253608cfd730404"
+                "url": "https://github.com/codex-project/filesystems.git",
+                "reference": "f62a953183f8f12c2611f84d06bd92e1138a8bfd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/filesystems/zipball/f62a953183f8f12c2611f84d06bd92e1138a8bfd",
+                "reference": "f62a953183f8f12c2611f84d06bd92e1138a8bfd",
+                "shasum": ""
             },
             "require": {
                 "codex/core": "~2.0",
@@ -925,6 +927,7 @@
                     "Codex\\Filesystems\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -939,31 +942,30 @@
             "description": "Codex Addon - Adds a collection of common filesystem adapters. These can be used by your projects.",
             "homepage": "https://codex.radic.ninja",
             "keywords": [
+                "Flysystem",
                 "codex",
                 "disks",
                 "documentation",
                 "filesystem",
-                "flysystem",
                 "laravel",
                 "markdown",
                 "remote"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/filesystems",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:24:19+00:00"
         },
         {
             "name": "codex/git",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/git",
-                "reference": "6c09e0eac9a6175078a0f84ae39a2052bb98c775"
+                "url": "https://github.com/codex-project/git.git",
+                "reference": "35d6f7ed64a9b90ce645a08afa008b38a52858f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/git/zipball/35d6f7ed64a9b90ce645a08afa008b38a52858f6",
+                "reference": "35d6f7ed64a9b90ce645a08afa008b38a52858f6",
+                "shasum": ""
             },
             "require": {
                 "codex/core": "~2.0",
@@ -1002,6 +1004,7 @@
                     "Codex\\Git\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1030,22 +1033,21 @@
                 "tags",
                 "webhook"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/git",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:24:19+00:00"
         },
         {
             "name": "codex/packagist",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/packagist",
-                "reference": "cf9b3d2d82addd16d79f4ac319b28bf581ef6933"
+                "url": "https://github.com/codex-project/packagist.git",
+                "reference": "25572e5a3fd3ef183f8fd343709c3491490cb9d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/packagist/zipball/25572e5a3fd3ef183f8fd343709c3491490cb9d9",
+                "reference": "25572e5a3fd3ef183f8fd343709c3491490cb9d9",
+                "shasum": ""
             },
             "require": {
                 "codex/core": "~2.0",
@@ -1077,6 +1079,7 @@
                     "Codex\\Packagist\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1100,22 +1103,21 @@
                 "packages",
                 "packagist"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/packagist",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:24:19+00:00"
         },
         {
             "name": "codex/phpdoc",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/phpdoc",
-                "reference": "f1be8ad3ad4cc626bbb7cbe6c8000c974d543857"
+                "url": "https://github.com/codex-project/phpdoc.git",
+                "reference": "ad49dcbbff1428a25905f6cbcf7b4874e992f1ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/phpdoc/zipball/ad49dcbbff1428a25905f6cbcf7b4874e992f1ce",
+                "reference": "ad49dcbbff1428a25905f6cbcf7b4874e992f1ce",
+                "shasum": ""
             },
             "require": {
                 "codex/core": "~2.0",
@@ -1156,11 +1158,7 @@
                     "Codex\\Phpdoc\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Codex\\Tests\\Phpdoc\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1188,22 +1186,21 @@
                 "markdown",
                 "phpdoc"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/phpdoc",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:24:19+00:00"
         },
         {
             "name": "codex/sitemap",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "bitbucket.org:codex-project/sitemap",
-                "reference": "39c1a9c1e9fad630366b98ace344c10c2db05682"
+                "url": "https://github.com/codex-project/sitemap.git",
+                "reference": "2718ea4a7363350497fa21bce3b6161cf33737b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codex-project/sitemap/zipball/2718ea4a7363350497fa21bce3b6161cf33737b1",
+                "reference": "2718ea4a7363350497fa21bce3b6161cf33737b1",
+                "shasum": ""
             },
             "require": {
                 "codex/core": "~2.0",
@@ -1236,6 +1233,7 @@
                     "Codex\\Sitemap\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1250,6 +1248,7 @@
             "description": "Codex Addon. Generates a sitemap.xml.",
             "homepage": "https://codex.radic.ninja",
             "keywords": [
+                "Sitemap",
                 "codex",
                 "documentation",
                 "google",
@@ -1257,17 +1256,9 @@
                 "markdown",
                 "search-engine",
                 "seo",
-                "sitemap",
                 "xml"
             ],
-            "support": {
-                "docs": "https://codex.radic.ninja",
-                "email": "rradic@hotmail.com",
-                "issues": "https://github.com/codex-project/codex/issues",
-                "source": "https://github.com/codex-project/codex/sitemap",
-                "wiki": "https://codex.radic.ninja"
-            },
-            "time": "2019-04-17T10:48:33+00:00"
+            "time": "2019-04-27T07:24:19+00:00"
         },
         {
             "name": "colinodell/json5",
@@ -4700,16 +4691,16 @@
         },
         {
             "name": "league/flysystem-sftp",
-            "version": "1.0.18",
+            "version": "1.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-sftp.git",
-                "reference": "61bc5a6ade892b5ac81e62b8c21be2c1798acc2a"
+                "reference": "d1ac352947ddf375ecb42a024d2072c9a294fee9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-sftp/zipball/61bc5a6ade892b5ac81e62b8c21be2c1798acc2a",
-                "reference": "61bc5a6ade892b5ac81e62b8c21be2c1798acc2a",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-sftp/zipball/d1ac352947ddf375ecb42a024d2072c9a294fee9",
+                "reference": "d1ac352947ddf375ecb42a024d2072c9a294fee9",
                 "shasum": ""
             },
             "require": {
@@ -4738,7 +4729,7 @@
                 }
             ],
             "description": "Flysystem adapter for SFTP",
-            "time": "2019-01-07T11:56:21+00:00"
+            "time": "2019-04-25T10:20:55+00:00"
         },
         {
             "name": "league/flysystem-webdav",
@@ -5718,21 +5709,21 @@
         },
         {
             "name": "myclabs/php-enum",
-            "version": "1.6.6",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/php-enum.git",
-                "reference": "32c4202886c51fbe5cc3a7c34ec5c9a4a790345e"
+                "reference": "e00b7b3d8d2ef0da908ea9d3df627271b93a9253"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/php-enum/zipball/32c4202886c51fbe5cc3a7c34ec5c9a4a790345e",
-                "reference": "32c4202886c51fbe5cc3a7c34ec5c9a4a790345e",
+                "url": "https://api.github.com/repos/myclabs/php-enum/zipball/e00b7b3d8d2ef0da908ea9d3df627271b93a9253",
+                "reference": "e00b7b3d8d2ef0da908ea9d3df627271b93a9253",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": ">=5.4"
+                "php": ">=7.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
@@ -5759,7 +5750,7 @@
             "keywords": [
                 "enum"
             ],
-            "time": "2019-02-04T21:18:49+00:00"
+            "time": "2019-04-23T12:00:56+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -8074,16 +8065,16 @@
         },
         {
             "name": "spatie/browsershot",
-            "version": "3.27.0",
+            "version": "3.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/browsershot.git",
-                "reference": "94c184461dd72f09c7a03ee0fdf00ec190e8bd7a"
+                "reference": "94e104cff2b970cd87aeaf86c59d7a45113bf89e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/browsershot/zipball/94c184461dd72f09c7a03ee0fdf00ec190e8bd7a",
-                "reference": "94c184461dd72f09c7a03ee0fdf00ec190e8bd7a",
+                "url": "https://api.github.com/repos/spatie/browsershot/zipball/94e104cff2b970cd87aeaf86c59d7a45113bf89e",
+                "reference": "94e104cff2b970cd87aeaf86c59d7a45113bf89e",
                 "shasum": ""
             },
             "require": {
@@ -8126,7 +8117,7 @@
                 "screenshot",
                 "webpage"
             ],
-            "time": "2019-03-11T10:56:24+00:00"
+            "time": "2019-04-24T18:28:14+00:00"
         },
         {
             "name": "spatie/crawler",
@@ -8718,16 +8709,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v6.2.0",
+            "version": "v6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "6fa3232ff9d3f8237c0fae4b7ff05e1baa4cd707"
+                "reference": "5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/6fa3232ff9d3f8237c0fae4b7ff05e1baa4cd707",
-                "reference": "6fa3232ff9d3f8237c0fae4b7ff05e1baa4cd707",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a",
+                "reference": "5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a",
                 "shasum": ""
             },
             "require": {
@@ -8776,20 +8767,20 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2019-03-10T07:52:41+00:00"
+            "time": "2019-04-21T09:21:45+00:00"
         },
         {
             "name": "symfony/cache",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "166073407fe28beaa97415352d196d87792534d7"
+                "reference": "9e64db924324700e19ef4f21c2c279a35ff9bdff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/166073407fe28beaa97415352d196d87792534d7",
-                "reference": "166073407fe28beaa97415352d196d87792534d7",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/9e64db924324700e19ef4f21c2c279a35ff9bdff",
+                "reference": "9e64db924324700e19ef4f21c2c279a35ff9bdff",
                 "shasum": ""
             },
             "require": {
@@ -8853,11 +8844,11 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2019-04-07T13:57:20+00:00"
+            "time": "2019-04-16T09:36:45+00:00"
         },
         {
             "name": "symfony/config",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -8920,7 +8911,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -9060,7 +9051,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -9113,7 +9104,7 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -9169,16 +9160,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "6238d050f5076314beb411ed02eeaec3d3a94f21"
+                "reference": "2748643dd378626c4d348a31ad12394e2d6f7ea8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/6238d050f5076314beb411ed02eeaec3d3a94f21",
-                "reference": "6238d050f5076314beb411ed02eeaec3d3a94f21",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/2748643dd378626c4d348a31ad12394e2d6f7ea8",
+                "reference": "2748643dd378626c4d348a31ad12394e2d6f7ea8",
                 "shasum": ""
             },
             "require": {
@@ -9238,11 +9229,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-12T15:32:33+00:00"
+            "time": "2019-04-16T11:19:53+00:00"
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
@@ -9299,7 +9290,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -9363,7 +9354,7 @@
         },
         {
             "name": "symfony/expression-language",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/expression-language.git",
@@ -9414,7 +9405,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -9464,7 +9455,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -9513,16 +9504,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "5b7ab6beaa5b053b8d3c9b13367ada9b292e12e1"
+                "reference": "6ebbe61f48069033225c9d3fa7eb5ed116d766d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/5b7ab6beaa5b053b8d3c9b13367ada9b292e12e1",
-                "reference": "5b7ab6beaa5b053b8d3c9b13367ada9b292e12e1",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/6ebbe61f48069033225c9d3fa7eb5ed116d766d6",
+                "reference": "6ebbe61f48069033225c9d3fa7eb5ed116d766d6",
                 "shasum": ""
             },
             "require": {
@@ -9563,20 +9554,20 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-03-30T15:58:42+00:00"
+            "time": "2019-04-17T14:56:00+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "72f5f8f9dd6e6fbda0220ded537610ad20fa2ce8"
+                "reference": "3db83303dbc1da9777e5ff63423b8b7fde423a1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/72f5f8f9dd6e6fbda0220ded537610ad20fa2ce8",
-                "reference": "72f5f8f9dd6e6fbda0220ded537610ad20fa2ce8",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/3db83303dbc1da9777e5ff63423b8b7fde423a1b",
+                "reference": "3db83303dbc1da9777e5ff63423b8b7fde423a1b",
                 "shasum": ""
             },
             "require": {
@@ -9652,11 +9643,11 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-16T07:20:25+00:00"
+            "time": "2019-04-17T16:17:13+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -9753,7 +9744,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -10003,7 +9994,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -10052,16 +10043,16 @@
         },
         {
             "name": "symfony/routing",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "b9f16550d76897ab0a86c198f8008c6578a5068f"
+                "reference": "0e5719d216017b1a0342fa48e86467cedca1c954"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/b9f16550d76897ab0a86c198f8008c6578a5068f",
-                "reference": "b9f16550d76897ab0a86c198f8008c6578a5068f",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/0e5719d216017b1a0342fa48e86467cedca1c954",
+                "reference": "0e5719d216017b1a0342fa48e86467cedca1c954",
                 "shasum": ""
             },
             "require": {
@@ -10124,11 +10115,11 @@
                 "uri",
                 "url"
             ],
-            "time": "2019-04-03T13:26:22+00:00"
+            "time": "2019-04-14T18:04:59+00:00"
         },
         {
             "name": "symfony/translation",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -10203,16 +10194,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "f42850fa32b8d7a35a75510810f6ef597674be74"
+                "reference": "e760a38e12b15032325e64be63f7ffc1817af617"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/f42850fa32b8d7a35a75510810f6ef597674be74",
-                "reference": "f42850fa32b8d7a35a75510810f6ef597674be74",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/e760a38e12b15032325e64be63f7ffc1817af617",
+                "reference": "e760a38e12b15032325e64be63f7ffc1817af617",
                 "shasum": ""
             },
             "require": {
@@ -10275,11 +10266,11 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-04-11T11:27:41+00:00"
+            "time": "2019-04-17T14:57:01+00:00"
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
@@ -10339,7 +10330,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.2.6",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -10398,16 +10389,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.8.12",
+            "version": "v5.8.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "e37222d221558107a80036e29d2be316b04c6f75"
+                "reference": "d1d78dbdd8884c35a79f9750743177297e7f31a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/e37222d221558107a80036e29d2be316b04c6f75",
-                "reference": "e37222d221558107a80036e29d2be316b04c6f75",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/d1d78dbdd8884c35a79f9750743177297e7f31a9",
+                "reference": "d1d78dbdd8884c35a79f9750743177297e7f31a9",
                 "shasum": ""
             },
             "require": {
@@ -10444,7 +10435,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2019-04-16T16:23:09+00:00"
+            "time": "2019-04-18T18:52:05+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -10711,6 +10702,99 @@
                 "validate"
             ],
             "time": "2016-11-23T20:04:58+00:00"
+        },
+        {
+            "name": "webmozart/glob",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/glob.git",
+                "reference": "3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/glob/zipball/3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
+                "reference": "3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3|^7.0",
+                "webmozart/path-util": "^2.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1",
+                "symfony/filesystem": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\Glob\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "A PHP implementation of Ant's glob.",
+            "time": "2015-12-29T11:14:33+00:00"
+        },
+        {
+            "name": "webmozart/path-util",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/path-util.git",
+                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/path-util/zipball/d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
+                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "webmozart/assert": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\PathUtil\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
+            "time": "2015-12-17T08:42:14+00:00"
         },
         {
             "name": "webonyx/graphql-php",
@@ -12393,16 +12477,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.5.8",
+            "version": "7.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c29c0525cf4572c11efe1db49a8b8aee9dfac58a"
+                "reference": "134669cf0eeac3f79bc7f0c793efbc158bffc160"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c29c0525cf4572c11efe1db49a8b8aee9dfac58a",
-                "reference": "c29c0525cf4572c11efe1db49a8b8aee9dfac58a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/134669cf0eeac3f79bc7f0c793efbc158bffc160",
+                "reference": "134669cf0eeac3f79bc7f0c793efbc158bffc160",
                 "shasum": ""
             },
             "require": {
@@ -12473,7 +12557,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-03-26T13:23:54+00:00"
+            "time": "2019-04-19T15:50:46+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -12642,16 +12726,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "4.1.0",
+            "version": "4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "6fda8ce1974b62b14935adc02a9ed38252eca656"
+                "reference": "3095910f0f0fb155ac4021fc51a4a7a39ac04e8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/6fda8ce1974b62b14935adc02a9ed38252eca656",
-                "reference": "6fda8ce1974b62b14935adc02a9ed38252eca656",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/3095910f0f0fb155ac4021fc51a4a7a39ac04e8a",
+                "reference": "3095910f0f0fb155ac4021fc51a4a7a39ac04e8a",
                 "shasum": ""
             },
             "require": {
@@ -12666,7 +12750,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -12691,7 +12775,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2019-02-01T05:27:49+00:00"
+            "time": "2019-04-25T07:55:20+00:00"
         },
         {
             "name": "sebastian/exporter",

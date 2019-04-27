@@ -67,6 +67,9 @@
         }
     },
     "config": {
+        "cache-dir": "./.tmp/cache",
+        "cache-ttl": 1,
+        "cache-files-maxsize": "1MiB"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -106,6 +109,22 @@
             "@composer clear",
             "@composer ide",
             "@composer checks"
+        ],
+        "disable-cache": [
+            "@composer config cache-dir \"./.tmp/cache\"",
+            "@composer config cache-ttl 1",
+            "@composer config cache-files-maxsize \"1MiB\""
+        ],
+        "enable-cache": [
+            "@composer config --unset cache-dir",
+            "@composer config --unset cache-ttl",
+            "@composer config --unset cache-files-maxsize"
+        ],
+        "reinstall": [
+            "rm -rf .tmp composer.lock vendor codex-addons",
+            "@composer disable-cache",
+            "@composer install --dev",
+            "@composer enable-cache"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

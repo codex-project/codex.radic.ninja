@@ -24,6 +24,8 @@ node {
 
             parallel 'Create PHPDoc Manifests': {
                 backend.artisan('codex:phpdoc:generate --all')
+            },'Git Sync Project Documentation': {
+                backend.artisan('codex:git:sync codex --force')
             }, 'Optimize': {
                 sh 'composer optimize'
             }

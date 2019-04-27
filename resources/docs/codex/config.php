@@ -16,24 +16,6 @@ return [
         ],
     ],
 
-//    'layout' => [
-//        'header' => [
-//            'menu' => [
-//                [
-//                    'label' => 'Projects',
-//                    'projects' => true,
-//                    'type' => 'side-menu',
-//                    'side' => 'right'
-//                ],
-//                [
-//                    'label' => 'Revisions',
-//                    'revisions' => true,
-//                    'type' => 'side-menu',
-//                    'side' => 'right'
-//                ]
-//            ]
-//        ]
-//    ],
     'processors'   => [
         'enabled'    => [
             'attributes' => true,
@@ -97,47 +79,59 @@ return [
         'default_class' => 'Codex\\Codex',
     ],
 
-    'git'       => [
-        'enabled'    => true,
-        'connection' => 'bitbucket_password',
-        'owner'      => 'codex-project',
-        'repository' => 'develop',
-        'branches'   => [], //[ 'master']
-        'paths'      => [
-            'docs' => 'develop/resources/docs/codex',
-        ],
-    ],
-    'git_links' => [
+    'git' => [
         'enabled' => true,
-//        'map'     => [
-//            'edit_page' => 'layout.toolbar.right', // push attribute to array (default)
-//        ],
-//        'links'   => [
-//            'edit_page' => [
-//                'component'  => 'c-button',
-//                'borderless' => true,
-//                'type'       => 'toolbar',
-//                'icon'       => function ($model) {
-//                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
-//                    $git        = $model->git();
-//                    $connection = data_get($git->getManager()->getConnectionConfig($git->getConnection()), 'driver');
-//                    if ($connection === 'bitbucket' || $connection === 'github') {
-//                        return $connection;
-//                    }
-//                    return 'git';
-//                },
-//                'children'   => 'Edit Page',
-//                'title'      => 'Edit this page',
-//                'target'     => '_black',
-//                'href'       => function ($model) {
-//                    /** @var \Codex\Contracts\Projects\Project|\Codex\Contracts\Revisions\Revision|\Codex\Contracts\Documents\Document $model */
-//                    $git = $model->git();
-//                    if ($model instanceof \Codex\Contracts\Documents\Document === false) {
-//                        return $git->getUrl();
-//                    }
-//                    return $git->getDocumentUrl($model->getPath()) . '?mode=edit&spa=0&at=develop&fileviewer=file-view-default';
-//                },
-//            ],
-//        ],
+
+        'remotes' => [
+            'core' => [
+                // The connection key to use (as defined at the top of this file)
+                'connection' => 'github_token',
+                // The owner (organisation or username)
+                'owner'      => 'codex-project',
+                // The repository name
+                'repository' => 'core',
+                // repository url
+                'url'        => 'https://github.com/%s/%s',
+
+                'document_url' => 'https://github.com/%s/%s/tree/%s',
+
+                'webhook' => [
+                    // Enable webhook support. Configure it in Github/Bitbucket.
+                    // This will automaticly sync your project every time a 'push' event occurs
+                    // This also requires you to configure queues properly (by using for example, redis with supervisord)
+                    'enabled' => true,
+
+                    // Github webhooks allow a 'secret' that has to match. Put it in here
+                    'secret'  => null,
+                ],
+            ],
+        ],
+        'syncs'   => [
+            [
+                'remote'   => 'core',
+                // Branches to sync
+                'branches' => [ 'master' ],
+                // Version (tags) constraints makes one able to define ranges and whatnot
+                // * || 1.x || >=2.5.0 || 5.0.0 - 7.2.3'
+                'versions' => null,
+
+                'skip' => [
+                    'patch_versions' => false,
+                    'minor_versions' => false,
+                ],
+
+                'clean' => true,
+
+                'copy' => [
+                    'resources/docs',
+                    'resources/docs/revision.yml' => 'revision.yml',
+                    'resources/docs/index.md'     => 'index.md',
+                ],
+            ],
+        ],
+        'links'   => [
+            'enabled' => true,
+            'remote'  => '%revision.key%',
+        ],
     ],
 ];
