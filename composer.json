@@ -67,7 +67,6 @@
         }
     },
     "config": {
-        "cache-dir": ".tmp/cache"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

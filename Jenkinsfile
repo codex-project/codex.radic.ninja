@@ -15,6 +15,7 @@ node {
 
             stage('Install Dependencies') {
                 backend
+                    .unlockComposer()
                     .disableComposerCache()
                     .install()
                     .setDotEnv('https://codex.radic.ninja')
