@@ -16,16 +16,17 @@ node {
             stage('Install Dependencies') {
                 backend
                     .unlockComposer()
-                    .disableComposerCache()
                     .install()
                     .setDotEnv('https://codex.radic.ninja')
                     .enableAddons()
             }
 
+            stage('Git Sync Project Documentation') {
+                backend.artisan('codex:git:sync codex --force')
+            }
+
             parallel 'Create PHPDoc Manifests': {
                 backend.artisan('codex:phpdoc:generate --all')
-            },'Git Sync Project Documentation': {
-                backend.artisan('codex:git:sync codex --force')
             }, 'Optimize': {
                 sh 'composer optimize'
             }

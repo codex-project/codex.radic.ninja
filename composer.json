@@ -66,11 +66,6 @@
             "Tests\\": "tests/"
         }
     },
-    "config": {
-        "cache-dir": "./.tmp/cache",
-        "cache-ttl": 1,
-        "cache-files-maxsize": "1MiB"
-    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
