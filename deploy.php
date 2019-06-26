@@ -70,16 +70,62 @@ task('artisan:codex:phpdoc:clear', function () {
 task('artisan:codex:phpdoc:generate', function () {
     run('{{bin/php}} {{release_path}}/artisan codex:phpdoc:generate --all --force');
 });
+task('composer:clear', function () {
+    run('{{bin/php}} {{bin/composer}} clear');
+});
+task('composer:optimize', function () {
+    run('{{bin/php}} {{bin/composer}} optimize');
+});
+task('composer:checks', function () {
+    run('{{bin/php}} {{bin/composer}} checks');
+});
+$envPresets = [
+    'development' => [
+        'APP_ENV'                => 'local',
+        'APP_DEBUG'              => 'true',
+        'RESPONSE_CACHE_ENABLED' => 'false',
+        'CODEX_CACHE_ENABLE'     => 'false',
+    ],
+    'production' => [
+        'APP_ENV'                => 'production',
+        'APP_DEBUG'              => 'false',
+        'RESPONSE_CACHE_ENABLED' => 'true',
+        'CODEX_CACHE_ENABLE'     => 'true',
+    ]
+];
+foreach($envPresets as $preset => $vars){
+    task('set-env:' . $preset, function() use ($vars){
+        foreach ($vars as $k => $v) {
+            run("{{bin/php}} {{release_path}}/artisan dotenv:set-key {$k} {$v}");
+        }
+    });
+}
 
-task('artisan:codex', [
+task('deploy', [
+    'deploy:info',
+    'deploy:prepare',
+    'deploy:lock',
+    'deploy:release',
+    'deploy:update_code',
+    'deploy:shared',
+    'deploy:vendors',
+    'deploy:writable',
+
+    'artisan:codex:phpdoc:clear',
+    'composer:clear',
     'artisan:vendor:publish:public',
     'artisan:codex:git:sync',
-    'artisan:codex:phpdoc:clear',
     'artisan:codex:phpdoc:generate',
+    'set-env:production',
+
+    'artisan:storage:link',
+    'artisan:config:cache',
+    'composer:checks',
+    'deploy:symlink',
+    'deploy:unlock',
+    'cleanup',
 ]);
 
-
-after('artisan:view:clear', 'artisan:codex');
 
 
 // [Optional] if deploy fails automatically unlock.
