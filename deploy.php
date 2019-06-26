@@ -71,13 +71,19 @@ task('artisan:codex:phpdoc:generate', function () {
     run('{{bin/php}} {{release_path}}/artisan codex:phpdoc:generate --all --force');
 });
 task('composer:clear', function () {
-    run('{{bin/php}} {{bin/composer}} clear');
+    run('{{bin/php}} {{release_path}}/artisan cache:clear');
+    run('{{bin/php}} {{release_path}}/artisan view:clear');
+    run('{{bin/php}} {{release_path}}/artisan config:clear');
+    run('{{bin/php}} {{release_path}}/artisan route:clear');
 });
 task('composer:optimize', function () {
-    run('{{bin/php}} {{bin/composer}} optimize');
+    run('{{bin/php}} {{release_path}}/artisan route:cache');
+    run('{{bin/php}} {{release_path}}/artisan view:cache');
+    run('{{bin/php}} {{release_path}}/artisan config:cache');
 });
-task('composer:checks', function () {
-    run('{{bin/php}} {{bin/composer}} checks');
+task('artisan:checks', function () {
+    run('{{bin/php}} {{release_path}}/artisan lighthouse:validate-schema');
+    run('{{bin/php}} {{release_path}}/artisan self-diagnosis');
 });
 $envPresets = [
     'development' => [
@@ -111,17 +117,16 @@ task('deploy', [
     'deploy:vendors',
     'deploy:writable',
 
-    'composer:clear',
+    'artisan:clear',
     'artisan:vendor:publish:public',
     'artisan:codex:git:sync',
-
     'artisan:codex:phpdoc:clear',
     'artisan:codex:phpdoc:generate',
     'set-env:production',
-
     'artisan:storage:link',
-    'artisan:config:cache',
-    'composer:checks',
+    'artisan:optimize',
+    'artisan:checks',
+
     'deploy:symlink',
     'deploy:unlock',
     'cleanup',
