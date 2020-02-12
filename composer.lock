@@ -110,6 +110,7 @@
                 "laravel",
                 "toolkit"
             ],
+            "abandoned": true,
             "time": "2015-05-16T19:24:58+00:00"
         },
         {
@@ -169,12 +170,12 @@
             "version": "v0.11.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/barryvdh/laravel-cors.git",
+                "url": "https://github.com/fruitcake/laravel-cors.git",
                 "reference": "c95ac944f2f20a17949aae6645692dfd3b402bca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-cors/zipball/c95ac944f2f20a17949aae6645692dfd3b402bca",
+                "url": "https://api.github.com/repos/fruitcake/laravel-cors/zipball/c95ac944f2f20a17949aae6645692dfd3b402bca",
                 "reference": "c95ac944f2f20a17949aae6645692dfd3b402bca",
                 "shasum": ""
             },
@@ -959,12 +960,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/codex-project/git.git",
-                "reference": "35d6f7ed64a9b90ce645a08afa008b38a52858f6"
+                "reference": "68688fa13074df751c3ada957d709d0debb8fd0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codex-project/git/zipball/35d6f7ed64a9b90ce645a08afa008b38a52858f6",
-                "reference": "35d6f7ed64a9b90ce645a08afa008b38a52858f6",
+                "url": "https://api.github.com/repos/codex-project/git/zipball/68688fa13074df751c3ada957d709d0debb8fd0a",
+                "reference": "68688fa13074df751c3ada957d709d0debb8fd0a",
                 "shasum": ""
             },
             "require": {
@@ -1033,7 +1034,7 @@
                 "tags",
                 "webhook"
             ],
-            "time": "2019-04-27T07:24:19+00:00"
+            "time": "2019-04-27T13:27:30+00:00"
         },
         {
             "name": "codex/packagist",
@@ -1111,12 +1112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/codex-project/phpdoc.git",
-                "reference": "ad49dcbbff1428a25905f6cbcf7b4874e992f1ce"
+                "reference": "b323aadc80da184878544b066f7f7335cc3df8db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codex-project/phpdoc/zipball/ad49dcbbff1428a25905f6cbcf7b4874e992f1ce",
-                "reference": "ad49dcbbff1428a25905f6cbcf7b4874e992f1ce",
+                "url": "https://api.github.com/repos/codex-project/phpdoc/zipball/b323aadc80da184878544b066f7f7335cc3df8db",
+                "reference": "b323aadc80da184878544b066f7f7335cc3df8db",
                 "shasum": ""
             },
             "require": {
@@ -1186,7 +1187,7 @@
                 "markdown",
                 "phpdoc"
             ],
-            "time": "2019-04-27T07:24:19+00:00"
+            "time": "2019-04-27T13:14:50+00:00"
         },
         {
             "name": "codex/sitemap",
@@ -1497,6 +1498,7 @@
                 "graphql",
                 "lighthouse"
             ],
+            "abandoned": true,
             "time": "2018-09-19T12:52:53+00:00"
         },
         {
@@ -2802,6 +2804,7 @@
                 "cache",
                 "http"
             ],
+            "abandoned": "php-http/cache-plugin",
             "time": "2019-01-27T13:36:25+00:00"
         },
         {
@@ -5074,6 +5077,17 @@
         {
             "name": "league/uri",
             "version": "5.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri.git",
+                "reference": "f2bceb755f1108758cf4cf925e4cd7699ce686aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/f2bceb755f1108758cf4cf925e4cd7699ce686aa",
+                "reference": "f2bceb755f1108758cf4cf925e4cd7699ce686aa",
+                "shasum": ""
+            },
             "require": {
                 "ext-fileinfo": "*",
                 "ext-intl": "*",
@@ -7591,17 +7605,17 @@
             ],
             "authors": [
                 {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com",
+                    "homepage": "https://benramsey.com"
+                },
+                {
                     "name": "Marijn Huizendveld",
                     "email": "marijn.huizendveld@gmail.com"
                 },
                 {
                     "name": "Thibaud Fabre",
                     "email": "thibaud@aztech.io"
-                },
-                {
-                    "name": "Ben Ramsey",
-                    "email": "ben@benramsey.com",
-                    "homepage": "https://benramsey.com"
                 }
             ],
             "description": "Formerly rhumsaa/uuid. A PHP 5.4+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID).",
@@ -10270,28 +10284,28 @@
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v4.2.7",
+            "version": "v4.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "57e00f3e0a3deee65b67cf971455b98afeacca46"
+                "reference": "1a76a943f2af334da13bc9f33f49392fa530eec9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/57e00f3e0a3deee65b67cf971455b98afeacca46",
-                "reference": "57e00f3e0a3deee65b67cf971455b98afeacca46",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/1a76a943f2af334da13bc9f33f49392fa530eec9",
+                "reference": "1a76a943f2af334da13bc9f33f49392fa530eec9",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3"
             },
             "require-dev": {
-                "symfony/var-dumper": "^4.1.1"
+                "symfony/var-dumper": "^4.1.1|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -10326,7 +10340,7 @@
                 "instantiate",
                 "serialize"
             ],
-            "time": "2019-04-09T20:09:28+00:00"
+            "time": "2020-01-04T13:00:46+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -10953,6 +10967,7 @@
                 "markdown",
                 "table"
             ],
+            "abandoned": "league/commonmark-ext-table",
             "time": "2018-11-28T11:29:11+00:00"
         },
         {
@@ -11013,6 +11028,7 @@
                 "config",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-config",
             "time": "2018-04-24T19:26:44+00:00"
         },
         {
@@ -11068,6 +11084,7 @@
                 "config-aggregator",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-config-aggregator",
             "time": "2018-04-04T20:37:31+00:00"
         },
         {
@@ -11118,6 +11135,7 @@
                 }
             ],
             "description": "PostProcessor extension for zendframework/zend-config-aggregator to allow usage of templated parameters within your configuration",
+            "abandoned": "laminas/laminas-config-aggregator-parameters",
             "time": "2019-01-21T20:35:51+00:00"
         },
         {
@@ -11182,6 +11200,7 @@
                 "psr",
                 "psr-7"
             ],
+            "abandoned": "laminas/laminas-diactoros",
             "time": "2018-09-05T19:29:37+00:00"
         },
         {
@@ -11228,6 +11247,7 @@
                 "stdlib",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-stdlib",
             "time": "2018-08-28T21:34:05+00:00"
         }
     ],
